@@ -5,13 +5,14 @@ import Constants from 'expo-constants';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 import { Homescreen, LoginScreen } from './screens';
+import { tokenCache } from './tokenCache';
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
 const Stack = createNativeStackNavigator();
 
 export function NavigationController() {
   const { isLoaded, user } = useUser();
-  const [initialRoute, setInitialRoute] = useState<string | null>(null);
+  const [initialRoute, setInitialRoute] = useState<Screen | null>(null);
 
   // Wait until Clerk finishes loading before deciding which screen to show
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function App() {
   }
 
   return (
-    <ClerkProvider publishableKey={publishableKey}>
+    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       {/* <ScreenProvider> */}
       <NavigationContainer>
         <NavigationController />

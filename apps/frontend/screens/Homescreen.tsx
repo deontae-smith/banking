@@ -32,8 +32,6 @@ export function Homescreen() {
 
   // Then in your render:
 
-  console.log(user, 'user');
-
   const openModal = () => {
     setVisible(true);
     Animated.timing(fadeAnim, {
@@ -54,7 +52,7 @@ export function Homescreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.greeting}>{getGreeting()}</Text>;
-      <Text style={styles.userName}>Antonio West</Text>
+      <Text style={styles.userName}>{user?.firstName}</Text>
       {/* Visa Card */}
       <LinearGradient
         colors={['#3b82f6', '#1e3a8a']} // blue → indigo
@@ -63,7 +61,7 @@ export function Homescreen() {
         style={styles.balanceCard}
       >
         <View style={styles.cardHeader}>
-          <Text style={styles.cardName}>Antonio West</Text>
+          <Text style={styles.cardName}>{user?.fullName}</Text>
           <Text style={styles.cardBrand}>VISA</Text>
         </View>
 
