@@ -1,3 +1,4 @@
+import { useUser } from '@clerk/clerk-expo';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useRef, useState } from 'react';
@@ -20,6 +21,18 @@ export function Homescreen() {
 
   const [visible, setVisible] = useState(false);
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const { user } = useUser();
+
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good Morning,';
+    if (hour < 18) return 'Good Afternoon,';
+    return 'Good Evening,';
+  };
+
+  // Then in your render:
+
+  console.log(user, 'user');
 
   const openModal = () => {
     setVisible(true);
@@ -40,9 +53,8 @@ export function Homescreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.greeting}>Good Morning,</Text>
+      <Text style={styles.greeting}>{getGreeting()}</Text>;
       <Text style={styles.userName}>Antonio West</Text>
-
       {/* Visa Card */}
       <LinearGradient
         colors={['#3b82f6', '#1e3a8a']} // blue → indigo
@@ -64,7 +76,6 @@ export function Homescreen() {
           </TouchableOpacity>
         </View>
       </LinearGradient>
-
       {/* Send/Receive Buttons */}
       <View style={styles.transferContainer}>
         <TouchableOpacity style={styles.receiveBtn}>
@@ -77,7 +88,6 @@ export function Homescreen() {
           <Text style={styles.sendText}>Send</Text>
         </TouchableOpacity>
       </View>
-
       {/* Expense Cards */}
       <View style={styles.expenseRow}>
         <View style={styles.expenseCard}>
@@ -94,7 +104,6 @@ export function Homescreen() {
           <Text style={styles.expenseSub}>Total Expense this month</Text>
         </View>
       </View>
-
       {/* Transactions */}
       <View style={styles.transactionsHeader}>
         <Text style={styles.transactionsTitle}>Transaction History</Text>
@@ -102,7 +111,6 @@ export function Homescreen() {
           <Text style={styles.seeAll}>See All</Text>
         </TouchableOpacity>
       </View>
-
       <FlatList
         data={transactions}
         keyExtractor={(item) => item.id}
@@ -123,7 +131,6 @@ export function Homescreen() {
           </View>
         )}
       />
-
       {/* Card Info Modal */}
       <Modal transparent visible={visible} animationType='none'>
         <Pressable style={styles.modalOverlay} onPress={closeModal}>

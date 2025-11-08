@@ -1,2 +1,2 @@
-export { Login } from './Login';
+export { LoginScreen } from './Login';
 export { Homescreen } from './Homescreen';

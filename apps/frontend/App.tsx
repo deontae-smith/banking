@@ -2,35 +2,52 @@ import { ClerkProvider, useUser } from '@clerk/clerk-expo';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Constants from 'expo-constants';
-import React, { useEffect } from 'react';
-import { Text } from 'react-native';
-import { Homescreen, Login } from './screens';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, Text, View } from 'react-native';
+import { Homescreen, LoginScreen } from './screens';
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
 const Stack = createNativeStackNavigator();
 
-function NavigationController() {
-  const navigation = useNavigation();
-  const { user } = useUser();
-  // const { current: screen } = useScreenState();
-  useEffect(() => {
-    if (!user) {
-      navigation.navigate('Login');
-    }
-  }, [user]);
+export function NavigationController() {
+  const { isLoaded, user } = useUser();
+  const [initialRoute, setInitialRoute] = useState<string | null>(null);
 
-  return (
-    <>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
+  // Wait until Clerk finishes loading before deciding which screen to show
+  useEffect(() => {
+    if (!isLoaded) return;
+
+    if (user) {
+      setInitialRoute('Homescreen');
+    } else {
+      setInitialRoute('Login');
+    }
+  }, [isLoaded, user]);
+
+  // Show a loader while Clerk is restoring the session
+  if (!initialRoute) {
+    return (
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#fff',
         }}
       >
-        <Stack.Screen name='Homescreen' component={Homescreen} />
-        <Stack.Screen name='Login' component={Login} />
-      </Stack.Navigator>
-      {/* Pass in User Id to navbar to handle customer actions */}
-    </>
+        <ActivityIndicator size='large' color='#000' />
+      </View>
+    );
+  }
+
+  return (
+    <Stack.Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName={initialRoute}
+    >
+      <Stack.Screen name='Login' component={LoginScreen} />
+      <Stack.Screen name='Homescreen' component={Homescreen} />
+    </Stack.Navigator>
   );
 }
 
@@ -46,7 +63,7 @@ export default function App() {
   }
 
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={publishableKey}>
       {/* <ScreenProvider> */}
       <NavigationContainer>
         <NavigationController />
