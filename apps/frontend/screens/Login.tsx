@@ -7,7 +7,7 @@ import {
   Image,
   Animated,
 } from 'react-native';
-import { useSignIn } from '@clerk/clerk-expo';
+import { useAuth, useSignIn } from '@clerk/clerk-expo';
 import { InputField } from '@/components';
 
 export function LoginScreen({ navigation }: any) {
@@ -47,18 +47,27 @@ export function LoginScreen({ navigation }: any) {
       }),
     ]).start();
   };
+  async function handleLogin(email: string, password: string) {
+    const { isSignedIn } = useAuth();
 
-  const handleLogin = async () => {
     try {
-      const result = await signIn.create({ identifier: email, password });
+      if (isSignedIn) {
+        // Already signed in
+        navigation.navigate('Homescreen');
+        return;
+      }
+
+      const result = await signIn.create({
+        identifier: email,
+        password,
+      });
+
+      await setActive({ session: result.createdSessionId });
       navigation.navigate('Homescreen');
-      //   await setActive({ session: result.createdSessionId });
-      setError('');
     } catch (err: any) {
-      setError(err.errors?.[0]?.message || 'Login failed');
-      triggerShake();
+      console.error('Login failed', err);
     }
-  };
+  }
 
   return (
     <View style={styles.container}>

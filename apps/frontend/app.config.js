@@ -10,5 +10,6 @@ export default {
       EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY:
         process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY,
     },
+    plugins: ['expo-secure-store'],
   },
 };
