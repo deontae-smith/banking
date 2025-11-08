@@ -1,0 +1,36 @@
+{
+  "name": "@ob/screens",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json --outDir ./dist ",
+    "dev": "pnpm run build --watch",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "generate:component": "turbo gen react-component"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.6.0",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^24.10.0",
+    "@types/pg": "^8.15.6",
+    "@types/react": "~19.1.0",
+    "@types/react-dom": "^19.2.2",
+    "concurrently": "^9.2.1",
+    "copyfiles": "^2.4.1",
+    "esbuild-css-modules-plugin": "^3.1.5",
+    "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "^9.25.0",
+    "react": "19.1.0",
+    "sass": "^1.93.3",
+    "tslib": "^2.8.1",
+    "typescript": "~5.9.2",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.12",
+    "ts-node": "^10.9.2"
+  }
+}

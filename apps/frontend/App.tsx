@@ -2,17 +2,23 @@ import { ClerkProvider, useUser } from '@clerk/clerk-expo';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Constants from 'expo-constants';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text } from 'react-native';
-import { Homescreen } from './screens';
+import { Homescreen, Login } from './screens';
+// import { ScreenProvider, useScreenState } from '@ob/screens';
 
 const Stack = createNativeStackNavigator();
 
 function NavigationController() {
   const navigation = useNavigation();
   const { user } = useUser();
+  // const { current: screen } = useScreenState();
+  useEffect(() => {
+    if (!user) {
+      navigation.navigate('Login');
+    }
+  }, [user]);
 
-  console.log(user, 'hi');
   return (
     <>
       <Stack.Navigator
@@ -21,6 +27,7 @@ function NavigationController() {
         }}
       >
         <Stack.Screen name='Homescreen' component={Homescreen} />
+        <Stack.Screen name='Login' component={Login} />
       </Stack.Navigator>
       {/* Pass in User Id to navbar to handle customer actions */}
     </>
@@ -40,9 +47,11 @@ export default function App() {
 
   return (
     <ClerkProvider>
+      {/* <ScreenProvider> */}
       <NavigationContainer>
         <NavigationController />
       </NavigationContainer>
+      {/* </ScreenProvider> */}
     </ClerkProvider>
   );
 }

@@ -1,0 +1,20 @@
+
+> @ob/screens@0.0.1 dev /Users/deontae/Desktop/main/banking/packages/screens
+> pnpm run build --watch
+
+
+> @ob/screens@0.0.1 build /Users/deontae/Desktop/main/banking/packages/screens
+> tsc --project ./tsconfig.json --outDir ./dist  --watch
+
+[2J[3J[H[[90m10:50:35 PM[0m] Starting compilation in watch mode...
+
+[[90m10:50:36 PM[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m10:51:54 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:51:54 PM[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m10:51:59 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m10:51:59 PM[0m] Found 0 errors. Watching for file changes.
+
