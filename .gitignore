@@ -6,6 +6,7 @@ node_modules/
 # Expo
 .expo/
 dist/
+turbo/
 web-build/
 
 # Native
