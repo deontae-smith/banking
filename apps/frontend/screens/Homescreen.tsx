@@ -58,7 +58,7 @@ export function Homescreen() {
       <Text style={styles.userName}>{user?.firstName}</Text>
       {/* Visa Card */}
       <LinearGradient
-        colors={["#3b82f6", "#1e3a8a"]} // blue → indigo
+        colors={["#1E293B","#1E40AF", "#1E3A8A", "#0F172A"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={styles.balanceCard}
@@ -73,7 +73,7 @@ export function Homescreen() {
             <Text style={styles.cardNumber}>8729 9128 7643 0274</Text>
             <View style={{ flexDirection: "row", gap: 20, marginTop: -10 }}>
               <Text style={styles.cardInfo}>CVV: 671</Text>
-              <Text style={styles.cardInfo}>Expiry: 12/27</Text>
+              <Text style={styles.cardInfo}>EXP: 12/27</Text>
             </View>
           </>
         )}
@@ -96,12 +96,12 @@ export function Homescreen() {
       {/* Send/Receive Buttons */}
       <View style={styles.transferContainer}>
         <TouchableOpacity style={styles.receiveBtn}>
-          <Ionicons name="arrow-up" size={20} color="#000" />
-          <Text style={styles.receiveText}>Receive</Text>
+          {/* <Ionicons name="arrow-up" size={20} color="#000" /> */}
+          <Text style={styles.receiveText}>Request</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.sendBtn}>
-          <Ionicons name="arrow-down" size={20} color="#fff" />
+          {/* <Ionicons name="arrow-down" size={20} color="#fff" /> */}
           <Text style={styles.sendText}>Send</Text>
         </TouchableOpacity>
       </View>
@@ -109,16 +109,16 @@ export function Homescreen() {
       <View style={styles.expenseRow}>
         <View style={styles.expenseCard}>
           <Ionicons name="wallet-outline" size={22} color="#000" />
-          <Text style={styles.expenseTitle}>All Expanse</Text>
+          <Text style={styles.expenseTitle}>Total Expenses</Text>
           <Text style={styles.expenseAmount}>$36,172.19</Text>
-          <Text style={styles.expenseSub}>Total Expense of all time</Text>
+          {/* <Text style={styles.expenseSub}>Total Expense of all time</Text> */}
         </View>
 
         <View style={styles.expenseCard}>
           <Ionicons name="calendar-outline" size={22} color="#000" />
-          <Text style={styles.expenseTitle}>Monthly Expanse</Text>
+          <Text style={styles.expenseTitle}>Monthly Subscriptions</Text>
           <Text style={styles.expenseAmount}>$972.74</Text>
-          <Text style={styles.expenseSub}>Total Expense this month</Text>
+          {/* <Text style={styles.expenseSub}>Total Expense this month</Text> */}
         </View>
       </View>
       {/* Transactions */}
@@ -252,9 +252,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f1f5f9",
+    backgroundColor: "#d2d2d25f",
     height: 55,
-    borderRadius: 16,
+    borderRadius: 25,
     flex: 1,
     marginRight: 10,
   },
@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#000",
     height: 55,
-    borderRadius: 16,
+    borderRadius: 25,
     flex: 1,
     marginLeft: 10,
   },

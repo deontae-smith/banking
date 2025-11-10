@@ -1,11 +1,11 @@
-import { ClerkProvider, useUser } from '@clerk/clerk-expo';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Constants from 'expo-constants';
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Text, View } from 'react-native';
-import { Homescreen, LoginScreen } from './screens';
-import { tokenCache } from './tokenCache';
+import { ClerkProvider, useUser } from "@clerk/clerk-expo";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Constants from "expo-constants";
+import React, { useEffect, useState } from "react";
+import { ActivityIndicator, Text, View } from "react-native";
+import { Homescreen, LoginScreen, SendScreen } from "./screens";
+import { tokenCache } from "./tokenCache";
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
 const Stack = createNativeStackNavigator();
@@ -19,9 +19,9 @@ export function NavigationController() {
   //   if (!isLoaded) return;
 
   //   if (user) {
-  //     setInitialRoute('Homescreen');
+  //     setInitialRoute("Homescreen");
   //   } else {
-  //     setInitialRoute('Login');
+  //     setInitialRoute("LoginScreen");
   //   }
   // }, [isLoaded, user]);
 
@@ -31,12 +31,12 @@ export function NavigationController() {
   //     <View
   //       style={{
   //         flex: 1,
-  //         justifyContent: 'center',
-  //         alignItems: 'center',
-  //         backgroundColor: '#fff',
+  //         justifyContent: "center",
+  //         alignItems: "center",
+  //         backgroundColor: "#fff",
   //       }}
   //     >
-  //       <ActivityIndicator size='large' color='#000' />
+  //       <ActivityIndicator size="large" color="#000" />
   //     </View>
   //   );
   // }
@@ -46,8 +46,9 @@ export function NavigationController() {
       screenOptions={{ headerShown: false }}
       initialRouteName={initialRoute}
     >
-      {/* <Stack.Screen name="Login" component={LoginScreen} /> */}
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="Homescreen" component={Homescreen} />
+      <Stack.Screen name="Sendscreen" component={SendScreen} />
     </Stack.Navigator>
   );
 }
