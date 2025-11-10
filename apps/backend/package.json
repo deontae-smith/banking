@@ -1,0 +1,25 @@
+{
+  "name": "@ob/backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -e ts -w . -x pnpm run watch:serve",
+    "watch:serve": "node --loader ts-node/esm server.ts"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@ngrok/ngrok": "^1.5.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.0",
+    "convex": "^1.29.0"
+  }
+}
