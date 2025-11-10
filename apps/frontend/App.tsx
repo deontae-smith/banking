@@ -46,7 +46,7 @@ export function NavigationController() {
       screenOptions={{ headerShown: false }}
       initialRouteName={initialRoute}
     >
-      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
       <Stack.Screen name="Homescreen" component={Homescreen} />
       <Stack.Screen name="Sendscreen" component={SendScreen} />
     </Stack.Navigator>

@@ -13,7 +13,7 @@ import {
   View,
 } from "react-native";
 
-export function Homescreen() {
+export function Homescreen({ navigation }: any) {
   const transactions = [
     { id: "1", name: "Uber", amount: 34.0, time: "Today • 08:48 PM" },
     { id: "2", name: "Airbnb", amount: 128.0, time: "Yesterday • 10:12 AM" },
@@ -58,7 +58,7 @@ export function Homescreen() {
       <Text style={styles.userName}>{user?.firstName}</Text>
       {/* Visa Card */}
       <LinearGradient
-        colors={["#1E293B","#1E40AF", "#1E3A8A", "#0F172A"]}
+        colors={["#1E293B", "#1E40AF", "#1E3A8A", "#0F172A"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={styles.balanceCard}
@@ -100,7 +100,10 @@ export function Homescreen() {
           <Text style={styles.receiveText}>Request</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.sendBtn}>
+        <TouchableOpacity
+          style={styles.sendBtn}
+          onPress={() => navigation.navigate("Sendscreen")}
+        >
           {/* <Ionicons name="arrow-down" size={20} color="#fff" /> */}
           <Text style={styles.sendText}>Send</Text>
         </TouchableOpacity>
