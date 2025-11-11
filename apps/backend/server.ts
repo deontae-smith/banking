@@ -6,10 +6,16 @@ import ngrok from '@ngrok/ngrok';
 import { ConvexHttpClient } from 'convex/browser';
 import { api } from './convex/_generated/api'; // adjust path if needed
 import { setTunnelUrl } from './libs/autoGenTunnelUrl';
+import { createClerkClient, verifyToken } from '@clerk/backend';
 
 dotenv.config({ path: '.env.local' });
 
 const convex = new ConvexHttpClient(process.env.CONVEX_URL!);
+
+const clerkClient = createClerkClient({
+  secretKey: process.env.CLERK_SECRET_KEY!,
+  publishableKey: process.env.CLERK_PUBLISHABLE_KEY!,
+});
 
 export async function createServer() {
   const node = express();
@@ -20,35 +26,40 @@ export async function createServer() {
   node.post('/api/auth/convex-login', async (req, res) => {
     try {
       const authHeader = req.headers.authorization;
-      if (!authHeader) return res.status(401).json({ error: 'No token' });
+      if (!authHeader) {
+        return res.status(401).json({ error: 'No token provided' });
+      }
 
       const token = authHeader.split(' ')[1];
+      if (!token) throw new Error('No token found in header');
 
-      // 1) Verify token with Clerk
-      const clerkRes = await fetch('https://api.clerk.com/v1/sessions', {
-        headers: { Authorization: `Bearer ${token}` },
+      // ✅ Verify Clerk token
+      const tokenPayload = await verifyToken(token, {
+        secretKey: process.env.CLERK_SECRET_KEY!,
       });
-      const clerkData = await clerkRes.json();
-      if (!clerkData.user_id) {
-        return res.status(401).json({ error: 'Invalid token' });
-      }
-      const userId = clerkData.user_id;
 
-      // 2) Query Convex for existing user by clerk_id
+      const userId = tokenPayload.sub;
+
+      // ✅ Fetch full user info from Clerk
+      const user = await clerkClient.users.getUser(userId);
+      // @ts-ignore
+
+      // ✅ Check existing user in Convex
       const existingUser = await convex.query(api.user.getUserByClerkId, {
         clerkId: userId,
       });
 
       if (!existingUser) {
-        // 3) Create the user (and optionally account/card chain if you implement it)
+        console.log('Creating new user in Convex...');
         const newUser = await convex.mutation(
           api.user.createUserWithAccountAndCard,
           {
             clerkId: userId,
-            email: clerkData.email_addresses[0].email_address,
+            // @ts-ignore
+            email: user.emailAddresses[0].emailAddress,
             name: {
-              firstName: clerkData.first_name,
-              lastName: clerkData.last_name,
+              firstName: user.firstName || '',
+              lastName: user.lastName || '',
             },
             address: {
               line1: '',
@@ -57,17 +68,19 @@ export async function createServer() {
               zipCode: '',
               country: '',
             },
-            // account field optional per schema
           }
         );
+
         return res.json({ message: 'User created', user: newUser });
       }
 
-      // 4) Return existing record
+      console.log('User already exists in Convex');
       return res.json({ message: 'User exists', user: existingUser });
-    } catch (err) {
-      console.error(err);
-      return res.status(500).json({ error: 'Server error' });
+    } catch (err: any) {
+      console.error('❌ Clerk verification or Convex error:', err);
+      return res
+        .status(500)
+        .json({ error: 'Server error', details: err.message });
     }
   });
 

@@ -56,6 +56,7 @@ export default defineSchema({
     expiration: C_ExpirationObject,
     cvv: v.string(),
     metadata: C_CardMeta,
+    balance: v.number(),
     account: v.id('account'),
   }),
 });

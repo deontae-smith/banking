@@ -21,6 +21,8 @@ export function LoginScreen({ navigation }: any) {
 
   const tunnelUrl = getBackendUrl();
 
+  console.log(tunnelUrl, 'url');
+
   const triggerShake = () => {
     Animated.sequence([
       Animated.timing(shakeAnim, {
@@ -70,22 +72,15 @@ export function LoginScreen({ navigation }: any) {
         await setActive({ session: result.createdSessionId });
 
         // Get fresh token from Clerk
-        const token = await getToken({ template: 'default' });
+        const token = await getToken();
 
-        // Call your backend to verify/create user in Convex
-        const backendRes = await fetch(
-          `https://${tunnelUrl}/api/auth/convex-login`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({
-              // optionally include other info
-            }),
-          }
-        );
+        const backendRes = await fetch(`${tunnelUrl}/api/auth/convex-login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         const backendData = await backendRes.json();
 
