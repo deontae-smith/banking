@@ -1,3 +1,4 @@
+import { useUserAccount } from '@/hooks/useAccountData';
 import { useAuth, useUser } from '@clerk/clerk-expo';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -24,6 +25,7 @@ export function Homescreen({ navigation }: any) {
   const [visible, setVisible] = useState(false);
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const { user } = useUser();
+  const { account, loading, error } = useUserAccount(user?.id);
 
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -90,7 +92,7 @@ export function Homescreen({ navigation }: any) {
         <View style={styles.balanceRow}>
           <View style={{ flexDirection: 'column' }}>
             <Text style={styles.label}>Available Balance</Text>
-            <Text style={styles.balanceAmount}>$12,890.81</Text>
+            <Text style={styles.balanceAmount}>${account?.card?.balance}</Text>
           </View>
 
           <TouchableOpacity onPress={openModal}>
@@ -122,14 +124,14 @@ export function Homescreen({ navigation }: any) {
         <View style={styles.expenseCard}>
           <Ionicons name='wallet-outline' size={22} color='#000' />
           <Text style={styles.expenseTitle}>Total Expenses</Text>
-          <Text style={styles.expenseAmount}>$36,172.19</Text>
+          <Text style={styles.expenseAmount}>--</Text>
           {/* <Text style={styles.expenseSub}>Total Expense of all time</Text> */}
         </View>
 
         <View style={styles.expenseCard}>
           <Ionicons name='calendar-outline' size={22} color='#000' />
           <Text style={styles.expenseTitle}>Monthly Subscriptions</Text>
-          <Text style={styles.expenseAmount}>$972.74</Text>
+          <Text style={styles.expenseAmount}>--</Text>
           {/* <Text style={styles.expenseSub}>Total Expense this month</Text> */}
         </View>
       </View>

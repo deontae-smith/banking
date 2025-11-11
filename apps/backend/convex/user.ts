@@ -57,6 +57,7 @@ export const createUserWithAccountAndCard = mutation({
         cardType: 'debit',
       },
       account: accountDoc,
+      balance: 0,
     });
 
     // 4. Update account to set card field

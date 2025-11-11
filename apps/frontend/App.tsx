@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 import { Homescreen, LoginScreen, SendScreen } from './screens';
 import { tokenCache } from './tokenCache';
+import 'react-native-url-polyfill/auto';
+
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
 const Stack = createNativeStackNavigator();
@@ -13,8 +15,6 @@ const Stack = createNativeStackNavigator();
 export function NavigationController() {
   const { isLoaded, user } = useUser();
   const [initialRoute, setInitialRoute] = useState<Screen | null>(null);
-
-  console.log(user?.id, 'hi');
 
   // // Wait until Clerk finishes loading before deciding which screen to show
   useEffect(() => {

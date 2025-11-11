@@ -21,8 +21,6 @@ export function LoginScreen({ navigation }: any) {
 
   const tunnelUrl = getBackendUrl();
 
-  console.log(tunnelUrl, 'url');
-
   const triggerShake = () => {
     Animated.sequence([
       Animated.timing(shakeAnim, {
