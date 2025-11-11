@@ -1,29 +1,28 @@
 
-> @ob/frontend@1.0.0 dev /Users/doron.r/Programming/banking/apps/frontend
+> @ob/frontend@1.0.0 dev /Users/deontae/Desktop/main/banking/apps/frontend
 > expo start
 
 [90menv: load .env[39m
 [90menv: export EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY[39m
-[90mStarting project at /Users/doron.r/Programming/banking/apps/frontend[39m
+[90mStarting project at /Users/deontae/Desktop/main/banking/apps/frontend[39m
 [2mStarting Metro Bundler[22m
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-█ ▄▄▄▄▄ █▄▄▄ ▀ ██ █ ▄▄▄▄▄ █
-█ █   █ ██▄▀ █  ▄▄█ █   █ █
-█ █▄▄▄█ ██▀▄ ▄▀██▀█ █▄▄▄█ █
-█▄▄▄▄▄▄▄█ ▀▄█ ▀▄▀ █▄▄▄▄▄▄▄█
-█ ▄▀▄▄█▄▀▀▄▀█▄▀█▀ █▄█▀█▀▀▄█
-██ ▄▀█▄▄▀█▄██▄▄▄▄ ▀███▄▀▀ █
-█▀█▀▀▀ ▄▄▀▄ █▀█▄ █ ▄▀▀█▀ ██
-█ ▄ ▄▀ ▄▄█▀██▀▄▀ ▄▀ ██▄▀  █
-█▄█▄██▄▄▄ █  ▄▄ █ ▄▄▄  ▄▀▄█
-█ ▄▄▄▄▄ ██ ▄▀▄  █ █▄█ ███ █
-█ █   █ █ ▀▀▄ ▀█▄ ▄  ▄ █▀▀█
-█ █▄▄▄█ █▀ █ ▀█▄ ▄█▀▀▄█   █
-█▄▄▄▄▄▄▄█▄▄█▄██▄▄▄▄█▄▄███▄█
+█ ▄▄▄▄▄ █▄▄▄ ▀▀▀█ █ ▄▄▄▄▄ █
+█ █   █ ██▄▀ █ ▀▄▄█ █   █ █
+█ █▄▄▄█ ██▀▄ ▄█▀█▀█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ ▀▄█ ▀ ▀ █▄▄▄▄▄▄▄█
+█ ▄▀  █▄▀▀▄▀█▄▀█▀ █▄█▀█▀▀▄█
+█ ██ ▄█▄▀ ▄██▄▄▄▄ ▀███▄▀▀ █
+█ ▀▀█ ▄▄▀   █▀█▄ █ ▄▀▀█▀ ██
+█ ▄  ▀█▄██▄ █▀▄▀ ▄▀ ██▄▀  █
+█▄██▄▄█▄█ ▀  ▄▄ █ ▄▄▄  ▄▀▄█
+█ ▄▄▄▄▄ ██▀▄▀▄  █ █▄█ ███ █
+█ █   █ █ █▀▄ ▀█▄ ▄  ▄ █▀▀█
+█ █▄▄▄█ █▀▀▀ ▀█▄ ▄█▀▀▄█   █
+█▄▄▄▄▄▄▄█▄▄▄▄██▄▄▄▄█▄▄███▄█
 
-› Metro waiting on [4mexp://192.168.1.153:8081[24m
-› Scan the QR code above with Expo Go
-(Android) or the Camera app (iOS)
+› Metro waiting on [4mexp://192.168.1.184:8081[24m
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
 › Web is waiting on [4mhttp://localhost:8081[24m
 
@@ -43,510 +42,67 @@
 › Press [1m?[22m [2m│[22m show all commands
 
 Logs for your project will appear below.[2m Press Ctrl+C to exit.[22m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  3.7% [22m[2m(10/52)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░
-[39m[49m[1m  7.1% [22m[2m( 52/195)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓[49m[39m[47m[37m░░░░░░░░░░░░░░
-[39m[49m[1m 12.8% [22m[2m(101/282)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░
-[39m[49m[1m 21.7% [22m[2m(166/356)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░
-[39m[49m[1m 22.6% [22m[2m(201/423)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░
-[39m[49m[1m 28.0% [22m[2m(265/501)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░
-[39m[49m[1m 33.6% [22m[2m(345/595)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░
-[39m[49m[1m 34.7% [22m[2m(420/713)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░
-[39m[49m[1m 46.4% [22m[2m(520/763)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░
-[39m[49m[1m 58.1% [22m[2m(616/808)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░
-[39m[49m[1m 62.6% [22m[2m(713/901)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░
-[39m[49m[1m 80.7% [22m[2m(850/946)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░
-[39m[49m[1m 87.7% [22m[2m( 944/1008)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░
-[39m[49m[1m 88.4% [22m[2m( 957/1018)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░
-[39m[49m[1m 95.8% [22m[2m(1060/1083)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░
-[39m[49m[1m 98.6% [22m[2m(1128/1136)[22m
-[43D[2A[0J[31m[1miOS[22m Bundling failed [39m[2m1657ms[22m[0m[2m apps/frontend/index.ts (1136 modules)[22m[0m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░
-[39m[49m[1m 98.6% [22m[2m(1128/1136)[22m
-[43D[2A[0J[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "..." (33:49)
-
-[0m [90m 31 |[39m
- [90m 32 |[39m       [33m<[39m[33mView[39m style[33m=[39m{{ marginTop[33m:[39m [35m200[39m[33m,[39m alignItems[33m:[39m [32m"center"[39m }}[33m>[39m
-[31m[1m>[22m[39m[90m 33 |[39m         [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m45[39m }}[33mSending[39m $ {amount} to {receiver}[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m    |[39m                                                  [31m[1m^[22m[39m
- [90m 34 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 35 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 36 |[39m   )[33m;[39m[0m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  3.9% [22m[2m(17/86)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░
-[39m[49m[1m 10.6% [22m[2m( 87/267)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓[49m[39m[47m[37m░░░░░░░░░░░░░░
-[39m[49m[1m 13.8% [22m[2m(120/323)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░
-[39m[49m[1m 24.9% [22m[2m(202/405)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░
-[39m[49m[1m 24.9% [22m[2m(300/613)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░
-[39m[49m[1m 37.7% [22m[2m(440/717)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░
-[39m[49m[1m 49.4% [22m[2m(581/827)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░
-[39m[49m[1m 64.1% [22m[2m(718/897)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░
-[39m[49m[1m 85.4% [22m[2m(889/962)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░
-[39m[49m[1m 88.4% [22m[2m( 955/1016)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░
-[39m[49m[1m 92.7% [22m[2m(1011/1050)[22m
-[43D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░
-[39m[49m[1m 99.1% [22m[2m(1131/1136)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m1398ms[22m[0m[2m apps/frontend/index.ts (1136 modules)[22m[0m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░
-[39m[49m[1m 99.1% [22m[2m(1131/1136)[22m
-[43D[2A[0J[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  4.2% [22m[2m(14/68)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.0% [22m[2m( 79/280)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓[49m[39m[47m[37m░░░░░░░░░░░░░░[39m[49m[1m 18.4% [22m[2m(160/373)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░[39m[49m[1m 19.2% [22m[2m(214/488)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 27.4% [22m[2m(331/632)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░[39m[49m[1m 36.6% [22m[2m(432/714)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░[39m[49m[1m 53.7% [22m[2m(586/800)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░[39m[49m[1m 76.8% [22m[2m(760/867)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 81.4% [22m[2m(884/980)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 81.4% [22m[2m( 922/1022)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 93.0% [22m[2m(1022/1060)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 98.4% [22m[2m(1134/1143)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.7% [22m[2m(1141/1143)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1142/1143)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1147/1149)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1148/1149)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1149/1149)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1151/1194)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1162/1219)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1165/1224)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1165/1225)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1166/1225)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1170/1228)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1170/1231)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1171/1231)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1173/1246)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1174/1246)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1175/1247)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1184/1280)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1206/1297)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1210/1314)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1217/1320)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1224/1327)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1234/1330)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1250/1335)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1263/1351)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1276/1355)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1284/1376)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1298/1386)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1309/1404)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1321/1408)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1332/1412)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1347/1414)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1356/1418)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1362/1418)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1364/1418)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1365/1418)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1371/1422)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1381/1432)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1399/1444)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1423/1467)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1436/1481)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1457/1486)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1491/1516)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1518/1527)[22m
+[138D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1537/1539)[22m
+[138D[1A[0J[32m[1miOS[22m Bundled [39m[2m6254ms[22m[0m[2m apps/frontend/index.ts (1539 modules)[22m[0m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1537/1539)[22m
+[138D[1A[0J[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
 [7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (33:34)
-
-[0m [90m 31 |[39m
- [90m 32 |[39m       [33m<[39m[33mView[39m style[33m=[39m{{ marginTop[33m:[39m [35m200[39m[33m,[39m alignItems[33m:[39m [32m"center"[39m }}[33m>[39m
-[31m[1m>[22m[39m[90m 33 |[39m         [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m  }}[33m>[39m
- [90m    |[39m                                   [31m[1m^[22m[39m
- [90m 34 |[39m           [33mSending[39m ${amount} to {receiver}
- [90m 35 |[39m         [33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m 36 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (33:34)
-
-[0m [90m 31 |[39m
- [90m 32 |[39m       [33m<[39m[33mView[39m style[33m=[39m{{ marginTop[33m:[39m [35m200[39m[33m,[39m alignItems[33m:[39m [32m"center"[39m }}[33m>[39m
-[31m[1m>[22m[39m[90m 33 |[39m         [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m  }}[33m>[39m
- [90m    |[39m                                   [31m[1m^[22m[39m
- [90m 34 |[39m           [33mSending[39m ${amount} to {receiver}
- [90m 35 |[39m         [33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m 36 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'useState' doesn't exist]
-[7m[37m[1m LOG [22m[39m[27m null user
 [7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m95ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m80ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (71:10)
-
-[0m [90m 69 |[39m                 
- [90m 70 |[39m             [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 71 |[39m           [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m    |[39m           [31m[1m^[22m[39m
- [90m 72 |[39m             [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m style[33m=[39m{[styles[33m.[39mprogressBar[33m,[39m { width[33m:[39m widthAnim }]} [33m/[39m[33m>[39m
- [90m 73 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 74 |[39m         )}[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (71:10)
-
-[0m [90m 69 |[39m                 
- [90m 70 |[39m             [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 71 |[39m           [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m    |[39m           [31m[1m^[22m[39m
- [90m 72 |[39m             [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m style[33m=[39m{[styles[33m.[39mprogressBar[33m,[39m { width[33m:[39m widthAnim }]} [33m/[39m[33m>[39m
- [90m 73 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 74 |[39m         )}[0m]
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (70:12)
-
-[0m [90m 68 |[39m           [33m<[39m[33mView[39m[33m>[39m
- [90m 69 |[39m             [33m<[39m
-[31m[1m>[22m[39m[90m 70 |[39m             [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 71 |[39m               [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m
- [90m 72 |[39m                 style[33m=[39m{[styles[33m.[39mprogressBar[33m,[39m { width[33m:[39m widthAnim }]}
- [90m 73 |[39m               [33m/[39m[33m>[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (70:12)
-
-[0m [90m 68 |[39m           [33m<[39m[33mView[39m[33m>[39m
- [90m 69 |[39m             [33m<[39m
-[31m[1m>[22m[39m[90m 70 |[39m             [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 71 |[39m               [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m
- [90m 72 |[39m                 style[33m=[39m{[styles[33m.[39mprogressBar[33m,[39m { width[33m:[39m widthAnim }]}
- [90m 73 |[39m               [33m/[39m[33m>[39m[0m]
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m69ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m74ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m67ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (78:8)
-
-[0m [90m 76 |[39m         [90m//     </View>[39m
- [90m 77 |[39m         [90m//   </View>[39m
-[31m[1m>[22m[39m[90m 78 |[39m         )}
- [90m    |[39m         [31m[1m^[22m[39m
- [90m 79 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 80 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 81 |[39m   )[33m;[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (78:8)
-
-[0m [90m 76 |[39m         [90m//     </View>[39m
- [90m 77 |[39m         [90m//   </View>[39m
-[31m[1m>[22m[39m[90m 78 |[39m         )}
- [90m    |[39m         [31m[1m^[22m[39m
- [90m 79 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 80 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 81 |[39m   )[33m;[39m[0m]
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░
-[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[43D[2A[0J[32m[1miOS[22m Bundled [39m[2m72ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m undefined user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (70:4)
-
-[0m [90m 68 |[39m       )}
- [90m 69 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 70 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m    |[39m     [31m[1m^[22m[39m
- [90m 71 |[39m   )[33m;[39m
- [90m 72 |[39m }
- [90m 73 |[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (70:4)
-
-[0m [90m 68 |[39m       )}
- [90m 69 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 70 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m    |[39m     [31m[1m^[22m[39m
- [90m 71 |[39m   )[33m;[39m
- [90m 72 |[39m }
- [90m 73 |[39m[0m]
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (70:4)
-
-[0m [90m 68 |[39m       )}
- [90m 69 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 70 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m    |[39m     [31m[1m^[22m[39m
- [90m 71 |[39m   )[33m;[39m
- [90m 72 |[39m }
- [90m 73 |[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (70:4)
-
-[0m [90m 68 |[39m       )}
- [90m 69 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 70 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m    |[39m     [31m[1m^[22m[39m
- [90m 71 |[39m   )[33m;[39m
- [90m 72 |[39m }
- [90m 73 |[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (64:10)
-
-[0m [90m 62 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 63 |[39m
-[31m[1m>[22m[39m[90m 64 |[39m           [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m28[39m[33m,[39m textAlign[33m:[39m [32m"center"[39m[33m,[39m color[33m:[39m [32m"#111827"[39m }}[33m>[39m
- [90m    |[39m           [31m[1m^[22m[39m
- [90m 65 |[39m             ${amount} sent to {receiver}[33m![39m
- [90m 66 |[39m           [33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m 67 |[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (64:10)
-
-[0m [90m 62 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 63 |[39m
-[31m[1m>[22m[39m[90m 64 |[39m           [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m28[39m[33m,[39m textAlign[33m:[39m [32m"center"[39m[33m,[39m color[33m:[39m [32m"#111827"[39m }}[33m>[39m
- [90m    |[39m           [31m[1m^[22m[39m
- [90m 65 |[39m             ${amount} sent to {receiver}[33m![39m
- [90m 66 |[39m           [33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m 67 |[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: JSX attributes must only be assigned a non-empty expression. (51:26)
-
-[0m [90m 49 |[39m             {[90m/* Progress bar */[39m}
- [90m 50 |[39m             [33m<[39m[33mTouchableOpacity[39m[33m>[39m
-[31m[1m>[22m[39m[90m 51 |[39m               [33m<[39m[33mText[39m style[33m=[39m{}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m    |[39m                           [31m[1m^[22m[39m
- [90m 52 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 53 |[39m             [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m 54 |[39m               [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: JSX attributes must only be assigned a non-empty expression. (51:26)
-
-[0m [90m 49 |[39m             {[90m/* Progress bar */[39m}
- [90m 50 |[39m             [33m<[39m[33mTouchableOpacity[39m[33m>[39m
-[31m[1m>[22m[39m[90m 51 |[39m               [33m<[39m[33mText[39m style[33m=[39m{}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m    |[39m                           [31m[1m^[22m[39m
- [90m 52 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 53 |[39m             [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m 54 |[39m               [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m[0m]
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (51:37)
-
-[0m [90m 49 |[39m             {[90m/* Progress bar */[39m}
- [90m 50 |[39m             [33m<[39m[33mTouchableOpacity[39m[33m>[39m
-[31m[1m>[22m[39m[90m 51 |[39m               [33m<[39m[33mText[39m style[33m=[39m{{fontSize[33m:[39m}}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m    |[39m                                      [31m[1m^[22m[39m
- [90m 52 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 53 |[39m             [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m 54 |[39m               [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token (51:37)
-
-[0m [90m 49 |[39m             {[90m/* Progress bar */[39m}
- [90m 50 |[39m             [33m<[39m[33mTouchableOpacity[39m[33m>[39m
-[31m[1m>[22m[39m[90m 51 |[39m               [33m<[39m[33mText[39m style[33m=[39m{{fontSize[33m:[39m}}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m    |[39m                                      [31m[1m^[22m[39m
- [90m 52 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 53 |[39m             [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mprogressContainer}[33m>[39m
- [90m 54 |[39m               [33m<[39m[33mAnimated[39m[33m.[39m[33mView[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (96:14)
-
-[0m [90m 94 |[39m     backgroundColor[33m:[39m [32m"#e2e8f0"[39m[33m,[39m
- [90m 95 |[39m     borderRadius[33m:[39m [35m10[39m[33m,[39m
-[31m[1m>[22m[39m[90m 96 |[39m     margin[33m:[39m [35m0[39m [35m25[39m[33m,[39m
- [90m    |[39m               [31m[1m^[22m[39m
- [90m 97 |[39m     overflow[33m:[39m [32m"hidden"[39m[33m,[39m
- [90m 98 |[39m   }[33m,[39m
- [90m 99 |[39m   progressBar[33m:[39m {[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (96:14)
-
-[0m [90m 94 |[39m     backgroundColor[33m:[39m [32m"#e2e8f0"[39m[33m,[39m
- [90m 95 |[39m     borderRadius[33m:[39m [35m10[39m[33m,[39m
-[31m[1m>[22m[39m[90m 96 |[39m     margin[33m:[39m [35m0[39m [35m25[39m[33m,[39m
- [90m    |[39m               [31m[1m^[22m[39m
- [90m 97 |[39m     overflow[33m:[39m [32m"hidden"[39m[33m,[39m
- [90m 98 |[39m   }[33m,[39m
- [90m 99 |[39m   progressBar[33m:[39m {[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (98:4)
-
-[0m [90m  96 |[39m     marginTop[33m:[39m [35m25[39m[33m,[39m
- [90m  97 |[39m     margin
-[31m[1m>[22m[39m[90m  98 |[39m     overflow[33m:[39m [32m"hidden"[39m[33m,[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m  99 |[39m   }[33m,[39m
- [90m 100 |[39m   progressBar[33m:[39m {
- [90m 101 |[39m     height[33m:[39m [32m"100%"[39m[33m,[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (98:4)
-
-[0m [90m  96 |[39m     marginTop[33m:[39m [35m25[39m[33m,[39m
- [90m  97 |[39m     margin
-[31m[1m>[22m[39m[90m  98 |[39m     overflow[33m:[39m [32m"hidden"[39m[33m,[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m  99 |[39m   }[33m,[39m
- [90m 100 |[39m   progressBar[33m:[39m {
- [90m 101 |[39m     height[33m:[39m [32m"100%"[39m[33m,[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: JSX attributes must only be assigned a non-empty expression. (55:38)
-
-[0m [90m 53 |[39m               [33m/[39m[33m>[39m
- [90m 54 |[39m             [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 55 |[39m             [33m<[39m[33mTouchableOpacity[39m onPress[33m=[39m{}[33m>[39m
- [90m    |[39m                                       [31m[1m^[22m[39m
- [90m 56 |[39m               [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m16[39m[33m,[39m color[33m:[39m [32m"#6b7280"[39m }}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m 57 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 58 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: JSX attributes must only be assigned a non-empty expression. (55:38)
-
-[0m [90m 53 |[39m               [33m/[39m[33m>[39m
- [90m 54 |[39m             [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 55 |[39m             [33m<[39m[33mTouchableOpacity[39m onPress[33m=[39m{}[33m>[39m
- [90m    |[39m                                       [31m[1m^[22m[39m
- [90m 56 |[39m               [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m16[39m[33m,[39m color[33m:[39m [32m"#6b7280"[39m }}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
- [90m 57 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 58 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m The action 'NAVIGATE' with payload {"name":"SendScreen"} was not handled by any navigator.
-
-Do you have a screen named 'SendScreen'?
-
-If you're trying to navigate to a screen in a nested navigator, see https://reactnavigation.org/docs/nesting-navigators#navigating-to-a-screen-in-a-nested-navigator.
-
-If you're using conditional rendering, navigation will happen automatically and you shouldn't navigate manually, see.
-
-This is a development-only warning and won't be shown in production.
-[7m[31m[1m ERROR [22m[39m[27m The action 'NAVIGATE' with payload {"name":"SendScreen"} was not handled by any navigator.
-
-Do you have a screen named 'SendScreen'?
-
-If you're trying to navigate to a screen in a nested navigator, see https://reactnavigation.org/docs/nesting-navigators#navigating-to-a-screen-in-a-nested-navigator.
-
-If you're using conditional rendering, navigation will happen automatically and you shouldn't navigate manually, see.
-
-This is a development-only warning and won't be shown in production.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m The action 'NAVIGATE' with payload {"name":"SendScreen"} was not handled by any navigator.
-
-Do you have a screen named 'SendScreen'?
-
-If you're trying to navigate to a screen in a nested navigator, see https://reactnavigation.org/docs/nesting-navigators#navigating-to-a-screen-in-a-nested-navigator.
-
-If you're using conditional rendering, navigation will happen automatically and you shouldn't navigate manually, see.
-
-This is a development-only warning and won't be shown in production.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Expected corresponding JSX closing tag for <View>. (56:12)
-
-[0m [90m 54 |[39m             [33m<[39m[33m/[39m[33mView[39m[33m>[39monPress[33m=[39m{() [33m=>[39m navigation[33m.[39mgoBack()}onPress[33m=[39m{() [33m=>[39m navigation[33m.[39mnavigate([32m"SendScreen"[39m)}[33m>[39m
- [90m 55 |[39m               [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m16[39m[33m,[39m color[33m:[39m [32m"#6b7280"[39m }}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
-[31m[1m>[22m[39m[90m 56 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 57 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 58 |[39m         [33m<[39m[33m/[39m[33m>[39m
- [90m 59 |[39m       ) [33m:[39m ([0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Expected corresponding JSX closing tag for <View>. (56:12)
-
-[0m [90m 54 |[39m             [33m<[39m[33m/[39m[33mView[39m[33m>[39monPress[33m=[39m{() [33m=>[39m navigation[33m.[39mgoBack()}onPress[33m=[39m{() [33m=>[39m navigation[33m.[39mnavigate([32m"SendScreen"[39m)}[33m>[39m
- [90m 55 |[39m               [33m<[39m[33mText[39m style[33m=[39m{{ fontSize[33m:[39m [35m16[39m[33m,[39m color[33m:[39m [32m"#6b7280"[39m }}[33m>[39m[33mCancel[39m[33m<[39m[33m/[39m[33mText[39m[33m>[39m
-[31m[1m>[22m[39m[90m 56 |[39m             [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m    |[39m             [31m[1m^[22m[39m
- [90m 57 |[39m           [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 58 |[39m         [33m<[39m[33m/[39m[33m>[39m
- [90m 59 |[39m       ) [33m:[39m ([0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (60:18)
-
-[0m [90m 58 |[39m                   fontSize[33m:[39m [35m16[39m[33m,[39m
- [90m 59 |[39m                   font
-[31m[1m>[22m[39m[90m 60 |[39m                   color[33m:[39m [32m"#6b7280"[39m[33m,[39m
- [90m    |[39m                   [31m[1m^[22m[39m
- [90m 61 |[39m                   textDecorationLine[33m:[39m [32m"underline"[39m[33m,[39m
- [90m 62 |[39m                 }}
- [90m 63 |[39m               [33m>[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (60:18)
-
-[0m [90m 58 |[39m                   fontSize[33m:[39m [35m16[39m[33m,[39m
- [90m 59 |[39m                   font
-[31m[1m>[22m[39m[90m 60 |[39m                   color[33m:[39m [32m"#6b7280"[39m[33m,[39m
- [90m    |[39m                   [31m[1m^[22m[39m
- [90m 61 |[39m                   textDecorationLine[33m:[39m [32m"underline"[39m[33m,[39m
- [90m 62 |[39m                 }}
- [90m 63 |[39m               [33m>[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (98:4)
-
-[0m [90m  96 |[39m     justifyContent[33m:[39m [32m"center"[39m[33m,[39m
- [90m  97 |[39m     a
-[31m[1m>[22m[39m[90m  98 |[39m     padding[33m:[39m [35m20[39m[33m,[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m  99 |[39m     paddingTop[33m:[39m [35m70[39m[33m,[39m
- [90m 100 |[39m     backgroundColor[33m:[39m [32m"#f8fafc"[39m[33m,[39m
- [90m 101 |[39m   }[33m,[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (98:4)
-
-[0m [90m  96 |[39m     justifyContent[33m:[39m [32m"center"[39m[33m,[39m
- [90m  97 |[39m     a
-[31m[1m>[22m[39m[90m  98 |[39m     padding[33m:[39m [35m20[39m[33m,[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m  99 |[39m     paddingTop[33m:[39m [35m70[39m[33m,[39m
- [90m 100 |[39m     backgroundColor[33m:[39m [32m"#f8fafc"[39m[33m,[39m
- [90m 101 |[39m   }[33m,[39m[0m]
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (98:4)
-
-[0m [90m  96 |[39m     justifyContent[33m:[39m [32m"center"[39m[33m,[39m
- [90m  97 |[39m     align
-[31m[1m>[22m[39m[90m  98 |[39m     padding[33m:[39m [35m20[39m[33m,[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m  99 |[39m     paddingTop[33m:[39m [35m70[39m[33m,[39m
- [90m 100 |[39m     backgroundColor[33m:[39m [32m"#f8fafc"[39m[33m,[39m
- [90m 101 |[39m   }[33m,[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendConfirmation.tsx: Unexpected token, expected "," (98:4)
-
-[0m [90m  96 |[39m     justifyContent[33m:[39m [32m"center"[39m[33m,[39m
- [90m  97 |[39m     align
-[31m[1m>[22m[39m[90m  98 |[39m     padding[33m:[39m [35m20[39m[33m,[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m  99 |[39m     paddingTop[33m:[39m [35m70[39m[33m,[39m
- [90m 100 |[39m     backgroundColor[33m:[39m [32m"#f8fafc"[39m[33m,[39m
- [90m 101 |[39m   }[33m,[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m null user
+[7m[31m[1m ERROR [22m[39m[27m [Error: GestureDetector must be used as a descendant of GestureHandlerRootView. Otherwise the gestures will not be recognized. See https://docs.swmansion.com/react-native-gesture-handler/docs/fundamentals/installation for more details.]
 [7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.

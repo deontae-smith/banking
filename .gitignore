@@ -6,8 +6,16 @@ node_modules/
 # Expo
 .expo/
 dist/
-turbo/
+.turbo/
 web-build/
+
+# Turbo
+.turbo/
+
+# Frontend
+apiUrl.ts
+
+
 
 # Native
 *.orig.*
