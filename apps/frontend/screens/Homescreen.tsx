@@ -3,6 +3,7 @@ import { useAuth, useUser } from '@clerk/clerk-expo';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useRef, useState, useEffect } from 'react';
+import Swipeable from 'react-native-gesture-handler/ReanimatedSwipeable';
 import {
   Animated,
   FlatList,
@@ -17,10 +18,38 @@ import {
 export function Homescreen({ navigation }: any) {
   const { signOut } = useAuth();
 
+  // Example transactions with statuses
   const transactions = [
-    { id: '1', name: 'Uber', amount: 34.0, time: 'Today • 08:48 PM' },
-    { id: '2', name: 'Airbnb', amount: 128.0, time: 'Yesterday • 10:12 AM' },
+    {
+      id: '1',
+      name: 'Uber',
+      amount: 34.0,
+      time: 'Today • 08:48 PM',
+      status: 'pending',
+    },
+    {
+      id: '2',
+      name: 'Airbnb',
+      amount: 128.0,
+      time: 'Yesterday • 10:12 AM',
+      status: 'completed',
+    },
+    {
+      id: '3',
+      name: 'Apple',
+      amount: 15.99,
+      time: 'Nov 10 • 02:40 PM',
+      status: 'pending',
+    },
   ];
+
+  // Separate transactions by status
+  const pendingTransactions = transactions.filter(
+    (t) => t.status === 'pending'
+  );
+  const completedTransactions = transactions.filter(
+    (t) => t.status === 'completed'
+  );
 
   const [visible, setVisible] = useState(false);
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -135,33 +164,53 @@ export function Homescreen({ navigation }: any) {
           {/* <Text style={styles.expenseSub}>Total Expense this month</Text> */}
         </View>
       </View>
-      {/* Transactions */}
-      <View style={styles.transactionsHeader}>
-        <Text style={styles.transactionsTitle}>Transaction History</Text>
-        <TouchableOpacity>
-          <Text style={styles.seeAll}>See All</Text>
-        </TouchableOpacity>
-      </View>
-      <FlatList
-        data={transactions}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.transactionRow}>
-            <View style={styles.leftSection}>
-              <View style={styles.iconCircle}>
-                <Text style={styles.iconLetter}>{item.name[0]}</Text>
+      <View style={{ marginTop: 20 }}>
+        {/* Only show Pending section if there are any pending transactions */}
+        {pendingTransactions.length > 0 && (
+          <>
+            <Text style={styles.sectionHeader}>Pending</Text>
+            {pendingTransactions.map((item) => (
+              <View key={item.id} style={styles.transactionRow}>
+                <View style={styles.leftSection}>
+                  <View style={styles.iconCircle}>
+                    <Text style={styles.iconLetter}>{item.name[0]}</Text>
+                  </View>
+                  <View>
+                    <Text style={styles.transactionName}>{item.name}</Text>
+                    <Text style={styles.transactionTime}>{item.time}</Text>
+                  </View>
+                </View>
+                <Text style={styles.transactionAmount}>
+                  ${item.amount.toFixed(2)}
+                </Text>
               </View>
-              <View>
-                <Text style={styles.transactionName}>{item.name}</Text>
-                <Text style={styles.transactionTime}>{item.time}</Text>
-              </View>
-            </View>
-            <Text style={styles.transactionAmount}>
-              ${item.amount.toFixed(2)}
-            </Text>
-          </View>
+            ))}
+          </>
         )}
-      />
+
+        {/* Only show Completed section if there are any completed transactions */}
+        {completedTransactions.length > 0 && (
+          <>
+            <Text style={styles.sectionHeader}>Completed</Text>
+            {completedTransactions.map((item) => (
+              <View key={item.id} style={styles.transactionRow}>
+                <View style={styles.leftSection}>
+                  <View style={styles.iconCircle}>
+                    <Text style={styles.iconLetter}>{item.name[0]}</Text>
+                  </View>
+                  <View>
+                    <Text style={styles.transactionName}>{item.name}</Text>
+                    <Text style={styles.transactionTime}>{item.time}</Text>
+                  </View>
+                </View>
+                <Text style={styles.transactionAmount}>
+                  ${item.amount.toFixed(2)}
+                </Text>
+              </View>
+            ))}
+          </>
+        )}
+      </View>
       {/* Card Info Modal */}
       {/* <Modal transparent visible={visible} animationType="none">
         <Pressable style={styles.modalOverlay} onPress={closeModal}>
@@ -232,6 +281,14 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: '700',
+  },
+  sectionHeader: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#64748b',
+    marginBottom: 8,
+    marginTop: 16,
+    textTransform: 'uppercase',
   },
   label: {
     color: '#cbd5e1',
