@@ -150,7 +150,20 @@ export function SendScreen({ navigation }: any) {
             </View>
           ))}
         </View>
-        <TouchableOpacity style={styles.buttonWrapper} activeOpacity={0.8}>
+        <TouchableOpacity
+          style={styles.buttonWrapper}
+          activeOpacity={0.8}
+          // onPress={() => navigation.navigate("SendConfirmation")}
+          //LEFT OFF HERE -> Trying to go to send confirmation screen with params
+          onPress={() => {
+            if (receiver && amount) {
+              navigation.navigate("SendConfirmation", {
+                receiver: receiver.name, // or receiver object if you prefer
+                amount: amount,
+              });
+            }
+          }}
+        >
           <LinearGradient
             colors={["#1E3A8A", "#1E40AF", "#172554"]} // gradient blues
             start={{ x: 0, y: 0 }}
@@ -158,8 +171,7 @@ export function SendScreen({ navigation }: any) {
             style={styles.gradient}
           >
             <Text style={styles.text}>
-              Send {receiver ? receiver.name : ""} $
-              {amount || "0"}
+              Send {receiver ? receiver.name : ""} ${amount || "0"}
             </Text>
           </LinearGradient>
         </TouchableOpacity>
