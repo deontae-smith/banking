@@ -37,16 +37,18 @@ export default defineSchema({
   user: defineTable({
     name: C_NameObject,
     email: v.string(),
-    clerk_id: v.string(), // ID FROM CLERK
+    clerk_id: v.string(),
     address: C_AddressObject,
-    account: v.id('account'),
-  }),
+    // Make the account field optional:
+    account: v.optional(v.id('account')),
+  }).index('by_clerkId', ['clerk_id']),
 
   account: defineTable({
     number: v.string(),
     routing: v.string(),
     user: v.id('user'),
-    card: v.id('card'),
+    // Make card optional:
+    card: v.optional(v.id('card')),
   }),
 
   card: defineTable({

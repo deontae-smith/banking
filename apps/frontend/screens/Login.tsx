@@ -6,18 +6,21 @@ import {
   StyleSheet,
   Animated,
 } from 'react-native';
-import { useAuth, useSignIn } from '@clerk/clerk-expo';
+import { useAuth, useSignIn, useUser } from '@clerk/clerk-expo';
 import { InputField } from '@/components';
+import { getBackendUrl } from '@/libs/getAPIUrl';
 
 export function LoginScreen({ navigation }: any) {
   const { signIn, setActive } = useSignIn();
-  const { isSignedIn } = useAuth();
+  const { isSignedIn, getToken } = useAuth();
+  const { user } = useUser();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const shakeAnim = useRef(new Animated.Value(0)).current;
 
-  // 🔹 Shake animation
+  const tunnelUrl = getBackendUrl();
+
   const triggerShake = () => {
     Animated.sequence([
       Animated.timing(shakeAnim, {
@@ -53,6 +56,7 @@ export function LoginScreen({ navigation }: any) {
 
     try {
       if (isSignedIn) {
+        // Already signed in, just navigate
         navigation.navigate('Homescreen');
         return;
       }
@@ -64,12 +68,40 @@ export function LoginScreen({ navigation }: any) {
 
       if (result.status === 'complete') {
         await setActive({ session: result.createdSessionId });
+
+        // Get fresh token from Clerk
+        const token = await getToken({ template: 'default' });
+
+        // Call your backend to verify/create user in Convex
+        const backendRes = await fetch(
+          `https://${tunnelUrl}/api/auth/convex-login`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              // optionally include other info
+            }),
+          }
+        );
+
+        const backendData = await backendRes.json();
+
+        if (!backendRes.ok) {
+          console.error('Backend verification failed:', backendData);
+          setError('Login succeeded but verification failed');
+          triggerShake();
+          return;
+        }
+
+        console.log('Backend verification succeeded:', backendData);
         navigation.navigate('Homescreen');
       } else {
-        // Example: requires email verification or 2FA
         setError('Check your email for verification steps.');
         triggerShake();
-        console.log('Sign-in incomplete', result);
+        console.log('Sign‑in incomplete', result);
       }
     } catch (err: any) {
       console.error('Login failed', err);
@@ -132,7 +164,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
   },
-  error: { color: 'red', textAlign: 'center', marginBottom: 8 },
+  error: {
+    color: 'red',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
   button: {
     backgroundColor: '#3b82f6',
     padding: 14,
@@ -140,7 +176,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
   },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: '600' },
-  link: { color: '#3b82f6', textAlign: 'center', marginTop: 12 },
-  footerText: { textAlign: 'center', marginTop: 8, color: '#6b7280' },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  link: {
+    color: '#3b82f6',
+    textAlign: 'center',
+    marginTop: 12,
+  },
+  footerText: {
+    textAlign: 'center',
+    marginTop: 8,
+    color: '#6b7280',
+  },
 });

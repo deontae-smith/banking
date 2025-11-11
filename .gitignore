@@ -9,8 +9,13 @@ dist/
 .turbo/
 web-build/
 
-
+# Turbo
 .turbo/
+
+# Frontend
+apiUrl.ts
+
+
 
 # Native
 *.orig.*

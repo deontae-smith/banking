@@ -14,7 +14,7 @@ export function NavigationController() {
   const { isLoaded, user } = useUser();
   const [initialRoute, setInitialRoute] = useState<Screen | null>(null);
 
-  console.log(user, 'hi');
+  console.log(user?.id, 'hi');
 
   // // Wait until Clerk finishes loading before deciding which screen to show
   useEffect(() => {

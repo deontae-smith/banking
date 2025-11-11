@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -e ts -w . -x pnpm run watch:serve",
-    "watch:serve": "node --loader ts-node/esm server.ts"
+    "watch:serve": "node --loader ts-node/esm server.ts && convex dev"
   },
   "license": "ISC",
   "dependencies": {
