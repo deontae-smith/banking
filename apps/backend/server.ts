@@ -10,6 +10,28 @@ import { createClerkClient, verifyToken } from '@clerk/backend';
 
 dotenv.config({ path: '.env.local' });
 
+if (!process.env.CONVEX_URL) {
+  throw new Error('❌ Missing required environment variable: CONVEX_URL');
+}
+
+if (!process.env.CLERK_SECRET_KEY) {
+  throw new Error('❌ Missing required environment variable: CLERK_SECRET_KEY');
+}
+
+if (!process.env.CLERK_PUBLISHABLE_KEY) {
+  throw new Error(
+    '❌ Missing required environment variable: CLERK_PUBLISHABLE_KEY'
+  );
+}
+
+if (!process.env.NGROK_AUTHTOKEN) {
+  throw new Error('❌ Missing required environment variable: NGROK_AUTHTOKEN');
+}
+
+if (!process.env.PORT) {
+  throw new Error('❌ Please define PORT in your environment variables');
+}
+
 const convex = new ConvexClient(process.env.CONVEX_URL!);
 const clerkClient = createClerkClient({
   secretKey: process.env.CLERK_SECRET_KEY!,
