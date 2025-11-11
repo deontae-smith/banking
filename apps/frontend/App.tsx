@@ -4,7 +4,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Constants from "expo-constants";
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
-import { Homescreen, LoginScreen, SendScreen } from "./screens";
+import {
+  Homescreen,
+  LoginScreen,
+  SendScreen,
+  SendConfirmation,
+} from "./screens";
 import { tokenCache } from "./tokenCache";
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
@@ -49,6 +54,7 @@ export function NavigationController() {
       {/* <Stack.Screen name="LoginScreen" component={LoginScreen} /> */}
       <Stack.Screen name="Homescreen" component={Homescreen} />
       <Stack.Screen name="Sendscreen" component={SendScreen} />
+      <Stack.Screen name="SendConfirmation" component={SendConfirmation} />
     </Stack.Navigator>
   );
 }
