@@ -43,27 +43,148 @@
 
 Logs for your project will appear below.[2m Press Ctrl+C to exit.[22m
 [1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.8% [22m[2m( 13/145)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  7.3% [22m[2m( 76/281)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░[39m[49m[1m 20.4% [22m[2m(171/379)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░[39m[49m[1m 21.9% [22m[2m(247/528)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 26.7% [22m[2m(337/652)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░[39m[49m[1m 41.2% [22m[2m(478/745)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 48.1% [22m[2m(593/855)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░[39m[49m[1m 68.0% [22m[2m(762/924)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 88.5% [22m[2m(925/983)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 88.5% [22m[2m( 971/1033)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 98.3% [22m[2m(1072/1081)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1147/1148)[22m
-[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1148/1148)[22m
-[151D[1A[0J[32m[1miOS[22m Bundled [39m[2m1654ms[22m[0m[2m apps/frontend/index.ts (1148 modules)[22m[0m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1148/1148)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.9% [22m[2m( 14/146)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  6.9% [22m[2m( 71/270)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓[49m[39m[47m[37m░░░░░░░░░░░░░░[39m[49m[1m 15.0% [22m[2m(136/351)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░[39m[49m[1m 21.7% [22m[2m(230/494)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 25.4% [22m[2m(287/569)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░[39m[49m[1m 31.6% [22m[2m(387/688)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 46.4% [22m[2m(522/766)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 61.3% [22m[2m(645/824)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░[39m[49m[1m 78.1% [22m[2m(799/904)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 82.7% [22m[2m( 912/1003)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 82.7% [22m[2m( 927/1027)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 98.5% [22m[2m(1066/1074)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.3% [22m[2m(1143/1147)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.7% [22m[2m(1145/1147)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1146/1147)[22m
+[151D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1147/1147)[22m
+[151D[1A[0J[32m[1miOS[22m Bundled [39m[2m1753ms[22m[0m[2m apps/frontend/index.ts (1147 modules)[22m[0m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1147/1147)[22m
 [151D[1A[0J[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
 [7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (275:2)
+
+[0m [90m 273 |[39m     color[33m:[39m [32m'#64748b'[39m[33m,[39m
+ [90m 274 |[39m   }
+[31m[1m>[22m[39m[90m 275 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 276 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 277 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 278 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m
+[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (275:2)
+
+[0m [90m 273 |[39m     color[33m:[39m [32m'#64748b'[39m[33m,[39m
+ [90m 274 |[39m   }
+[31m[1m>[22m[39m[90m 275 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 276 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 277 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 278 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m]
+[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (275:2)
+
+[0m [90m 273 |[39m     color[33m:[39m [32m'lightgrey'[39m[33m,[39m
+ [90m 274 |[39m   }
+[31m[1m>[22m[39m[90m 275 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 276 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 277 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 278 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m
+[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (275:2)
+
+[0m [90m 273 |[39m     color[33m:[39m [32m'lightgrey'[39m[33m,[39m
+ [90m 274 |[39m   }
+[31m[1m>[22m[39m[90m 275 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 276 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 277 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 278 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m]
+[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (275:2)
+
+[0m [90m 273 |[39m     color[33m:[39m [32m'grey'[39m[33m,[39m
+ [90m 274 |[39m   }
+[31m[1m>[22m[39m[90m 275 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 276 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 277 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 278 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m
+[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (275:2)
+
+[0m [90m 273 |[39m     color[33m:[39m [32m'grey'[39m[33m,[39m
+ [90m 274 |[39m   }
+[31m[1m>[22m[39m[90m 275 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 276 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 277 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 278 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m]
+[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (276:2)
+
+[0m [90m 274 |[39m     fontSize[33m:[39m [35m10[39m[33m,[39m
+ [90m 275 |[39m   }
+[31m[1m>[22m[39m[90m 276 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 277 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 278 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 279 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m
+[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/deontae/Desktop/main/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token, expected "," (276:2)
+
+[0m [90m 274 |[39m     fontSize[33m:[39m [35m10[39m[33m,[39m
+ [90m 275 |[39m   }
+[31m[1m>[22m[39m[90m 276 |[39m   cardNumber[33m:[39m {
+ [90m     |[39m   [31m[1m^[22m[39m
+ [90m 277 |[39m     color[33m:[39m [32m'white'[39m[33m,[39m
+ [90m 278 |[39m     fontWeight[33m:[39m [32m'700'[39m[33m,[39m
+ [90m 279 |[39m     fontSize[33m:[39m [35m22[39m[33m,[39m[0m]
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'getGreeting' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'cardDetailsVisible' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'visible' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'visible' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'visible' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'visible' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'visible' doesn't exist]
 [1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[151D[1A[0J[32m[1miOS[22m Bundled [39m[2m59ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
+[151D[1A[0J[32m[1miOS[22m Bundled [39m[2m70ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
 [7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'visible' doesn't exist]
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[151D[1A[0J[32m[1miOS[22m Bundled [39m[2m63ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
+[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
 [7m[37m[1m LOG [22m[39m[27m null hi
 [7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
 [7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
 [7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[37m[1m LOG [22m[39m[27m null hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[37m[1m LOG [22m[39m[27m null hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[151D[1A[0J[32m[1miOS[22m Bundled [39m[2m62ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
+[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[37m[1m LOG [22m[39m[27m [{"clerk_id": "user_35JDgU8QEMiecvRPXFHITbKQWUF", "firstName": "Todd", "phoneNumber": "2255555555"}] hi
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.

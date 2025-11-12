@@ -1,94 +1,26 @@
+import React, { useRef, useState, useEffect } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useUserAccount } from '@/hooks/useAccountData';
 import { useAuth, useUser } from '@clerk/clerk-expo';
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import React, { useRef, useState, useEffect } from 'react';
-import Swipeable from 'react-native-gesture-handler/ReanimatedSwipeable';
-import {
-  Animated,
-  FlatList,
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { getGreeting } from '@/utils';
+import Visa from '@/components/card/visa';
 
 export function Homescreen({ navigation }: any) {
   const { signOut } = useAuth();
-
-  // Example transactions with statuses
-  const transactions = [
-    {
-      id: '1',
-      name: 'Uber',
-      amount: 34.0,
-      time: 'Today • 08:48 PM',
-      status: 'pending',
-    },
-    {
-      id: '2',
-      name: 'Airbnb',
-      amount: 128.0,
-      time: 'Yesterday • 10:12 AM',
-      status: 'completed',
-    },
-    {
-      id: '3',
-      name: 'Apple',
-      amount: 15.99,
-      time: 'Nov 10 • 02:40 PM',
-      status: 'pending',
-    },
-  ];
-
-  // Separate transactions by status
-  const pendingTransactions = transactions.filter(
-    (t) => t.status === 'pending'
-  );
-  const completedTransactions = transactions.filter(
-    (t) => t.status === 'completed'
-  );
-
-  const [visible, setVisible] = useState(false);
-  const fadeAnim = useRef(new Animated.Value(0)).current;
   const { user } = useUser();
-  const { account, loading, error } = useUserAccount(user?.id);
-
-  const getGreeting = () => {
-    const hour = new Date().getHours();
-    if (hour < 12) return 'Good Morning,';
-    if (hour < 18) return 'Good Afternoon,';
-    return 'Good Evening,';
-  };
+  const { account, loading } = useUserAccount(user?.id);
 
   const handleSignOut = async () => {
     try {
       await signOut();
-      navigation.replace('LoginScreen'); // replace to avoid going back
+      navigation.replace('LoginScreen');
     } catch (err) {
-      console.log('Error signing out:', err);
+      throw new Error('Error signing out, please try again');
     }
   };
 
-  const openModal = () => {
-    setVisible(!visible);
-  };
-
-  useEffect(() => {
-    let timer;
-
-    // If details are visible, start 30-second timer
-    if (visible) {
-      timer = setTimeout(() => {
-        setVisible(false);
-      }, 10000); // 30 seconds
-    }
-
-    // Cleanup when component unmounts or when user toggles early
-    return () => clearTimeout(timer);
-  }, [visible]);
+  if (loading || !account) return;
 
   return (
     <View style={styles.container}>
@@ -97,57 +29,7 @@ export function Homescreen({ navigation }: any) {
         <Text style={styles.userName}>{user?.firstName}</Text>
       </TouchableOpacity>
       {/* Visa Card */}
-      <LinearGradient
-        colors={['#1E293B', '#1E40AF', '#1E3A8A', '#0F172A']}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        style={styles.balanceCard}
-      >
-        <View style={styles.cardHeader}>
-          <Text style={styles.cardName}>{user?.fullName}</Text>
-          <Text style={styles.cardBrand}>VISA</Text>
-        </View>
-
-        {visible && (
-          <>
-            <Text style={styles.cardNumber}>{account?.card?.number}</Text>
-            <View style={{ flexDirection: 'row', gap: 20, marginTop: -10 }}>
-              <Text style={styles.cardInfo}>CVV: 671</Text>
-              <Text style={styles.cardInfo}>EXP: 12/27</Text>
-            </View>
-          </>
-        )}
-
-        <View style={styles.balanceRow}>
-          <View style={{ flexDirection: 'column' }}>
-            <Text style={styles.label}>Available Balance</Text>
-            <Text style={styles.balanceAmount}>${account?.card?.balance}</Text>
-          </View>
-
-          <TouchableOpacity onPress={openModal}>
-            <Ionicons
-              name={visible ? 'eye-off-outline' : 'eye-outline'}
-              size={22}
-              color='white'
-            />
-          </TouchableOpacity>
-        </View>
-      </LinearGradient>
-      {/* Send/Receive Buttons */}
-      <View style={styles.transferContainer}>
-        <TouchableOpacity style={styles.receiveBtn}>
-          {/* <Ionicons name="arrow-up" size={20} color="#000" /> */}
-          <Text style={styles.receiveText}>Lock</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.sendBtn}
-          onPress={() => navigation.navigate('Sendscreen')}
-        >
-          {/* <Ionicons name="arrow-down" size={20} color="#fff" /> */}
-          <Text style={styles.sendText}>Send</Text>
-        </TouchableOpacity>
-      </View>
+      <Visa account={account} />
       {/* Expense Cards */}
       <View style={styles.expenseRow}>
         <View style={styles.expenseCard}>
@@ -165,8 +47,12 @@ export function Homescreen({ navigation }: any) {
         </View>
       </View>
       <View style={{ marginTop: 20 }}>
+        <Text style={styles.transactionHeader}>
+          Tranaction(s) will appear here
+        </Text>
+
         {/* Only show Pending section if there are any pending transactions */}
-        {pendingTransactions.length > 0 && (
+        {/* {pendingTransactions.length > 0 && (
           <>
             <Text style={styles.sectionHeader}>Pending</Text>
             {pendingTransactions.map((item) => (
@@ -186,10 +72,10 @@ export function Homescreen({ navigation }: any) {
               </View>
             ))}
           </>
-        )}
+        )} */}
 
         {/* Only show Completed section if there are any completed transactions */}
-        {completedTransactions.length > 0 && (
+        {/* {completedTransactions.length > 0 && (
           <>
             <Text style={styles.sectionHeader}>Completed</Text>
             {completedTransactions.map((item) => (
@@ -209,7 +95,7 @@ export function Homescreen({ navigation }: any) {
               </View>
             ))}
           </>
-        )}
+        )} */}
       </View>
       {/* Card Info Modal */}
       {/* <Modal transparent visible={visible} animationType="none">
@@ -268,20 +154,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     elevation: 6,
   },
-  cardHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  cardName: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: '500',
-  },
-  cardBrand: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: '700',
-  },
   sectionHeader: {
     fontSize: 14,
     fontWeight: '600',
@@ -290,66 +162,10 @@ const styles = StyleSheet.create({
     marginTop: 16,
     textTransform: 'uppercase',
   },
-  label: {
-    color: '#cbd5e1',
-    fontSize: 13,
-  },
-  balanceRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  cardNumber: {
-    color: 'white',
-    fontWeight: '700',
-    fontSize: 22,
-  },
-  cardInfo: {
-    color: 'white',
-    fontWeight: '700',
-    fontSize: 14,
-  },
-  balanceAmount: {
-    color: 'white',
-    fontWeight: '700',
-    fontSize: 32,
-  },
-  transferContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 25,
-  },
-  receiveBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#d2d2d25f',
-    height: 55,
-    borderRadius: 25,
-    flex: 1,
-    marginRight: 10,
-  },
-  sendBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#000',
-    height: 55,
-    borderRadius: 25,
-    flex: 1,
-    marginLeft: 10,
-  },
-  receiveText: {
-    fontWeight: '600',
-    color: '#000',
-    marginLeft: 8,
-    fontSize: 16,
-  },
-  sendText: {
-    fontWeight: '600',
-    color: '#fff',
-    marginLeft: 8,
-    fontSize: 16,
+  transactionHeader: {
+    color: 'grey',
+    fontSize: 12,
+    marginTop: 50,
   },
   expenseRow: {
     flexDirection: 'row',

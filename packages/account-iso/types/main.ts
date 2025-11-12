@@ -61,3 +61,16 @@ export interface Card {
   account: string; // reference to Account id
   balance: number;
 }
+
+export interface RetunredAccountData {
+  number: string;
+  routing: string;
+  balance: number;
+  card: Card | null;
+}
+
+export interface UseUserAccountResult {
+  account: RetunredAccountData | null;
+  loading: boolean;
+  error: string | null;
+}

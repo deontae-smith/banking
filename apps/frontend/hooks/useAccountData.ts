@@ -1,32 +1,13 @@
 import { getBackendUrl } from '@/libs/getAPIUrl';
 import { useEffect, useState, useRef } from 'react';
 import EventSource from 'react-native-sse';
-
-interface CardData {
-  number: string;
-  expiration: { month: string; year: string };
-  cvv: string;
-  metadata: { isLocked: boolean; spendingLimit: number; cardType: string };
-  balance: number;
-}
-
-interface AccountData {
-  number: string;
-  routing: string;
-  balance: number;
-  card?: CardData | null;
-}
-
-interface UseUserAccountResult {
-  account: AccountData | null;
-  loading: boolean;
-  error: string | null;
-}
+import { UseUserAccountResult, RetunredAccountData } from '@ob/account-iso';
+import { Card } from '@ob/account-iso';
 
 const RECONNECT_INTERVAL_MS = 5000;
 
 export function useUserAccount(clerkId?: string): UseUserAccountResult {
-  const [account, setAccount] = useState<AccountData | null>(null);
+  const [account, setAccount] = useState<RetunredAccountData | null>(null);
   const [loading, setLoading] = useState<boolean>(!!clerkId);
   const [error, setError] = useState<string | null>(null);
 
@@ -43,7 +24,7 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     try {
       const res = await fetch(`${backendUrl}/api/account/card/${cardId}`);
       const data = await res.json();
-      return data.card as CardData;
+      return data.card as Card;
     } catch (err) {
       console.error('Failed to fetch card:', err);
       return null;
@@ -75,7 +56,7 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
           return;
         }
 
-        let accountData: AccountData = payload.account;
+        let accountData: RetunredAccountData = payload.account;
 
         // If cardId exists, fetch the card info
         if (payload.account?.card) {
