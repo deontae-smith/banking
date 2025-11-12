@@ -26,6 +26,15 @@ export interface ExpirationObject {
   year: string; // e.g. "28" or "2028"
 }
 
+export type UserContact = {
+  id: string;
+  phoneNumber: string;
+};
+
+export interface UserMetadata {
+  contacts: UserContact[];
+}
+
 // Tables
 export interface User {
   name: NameObject;
@@ -33,6 +42,8 @@ export interface User {
   clerk_id: string;
   address: AddressObject;
   account: string; // reference to Account id
+  phoneNumber: string;
+  metadata: UserMetadata;
 }
 
 export interface Account {
@@ -48,4 +59,5 @@ export interface Card {
   cvv: string;
   metadata: CardMeta;
   account: string; // reference to Account id
+  balance: number;
 }

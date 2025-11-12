@@ -83,6 +83,10 @@ export async function createServer() {
               zipCode: '',
               country: '',
             },
+            number: user.phoneNumbers[0]
+              ? // @ts-ignore
+                user.phoneNumbers[0].phoneNumber.replace(/\D/g, '')
+              : '',
           }
         );
         return res.json({ message: 'User created', user: newUser });
@@ -160,6 +164,108 @@ export async function createServer() {
       return res
         .status(500)
         .json({ error: 'Server error', details: err.message });
+    }
+  });
+
+  app.get('/api/account/stream-contacts/:clerkId', async (req, res) => {
+    const { clerkId } = req.params;
+
+    // Set up Server-Sent Events headers
+    res.set({
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      Connection: 'keep-alive',
+    });
+    res.flushHeaders();
+
+    const send = (data: any) => res.write(`data: ${JSON.stringify(data)}\n\n`);
+
+    try {
+      // 1️⃣ Get the initial user
+      const user = await convex.query(api.user.getUserByClerkId, { clerkId });
+
+      if (!user) {
+        send({ error: 'User not found' });
+        return res.end();
+      }
+
+      // Send initial contacts
+      let lastContacts = user.metadata?.contacts ?? [];
+      send({ contacts: lastContacts });
+
+      // 2️⃣ Subscribe to user updates in Convex
+      const unsubscribe = convex.onUpdate(
+        api.user.getUserByClerkId,
+        { clerkId },
+        (updatedUser) => {
+          const newContacts = updatedUser?.metadata?.contacts ?? [];
+
+          // 3️⃣ Only emit if contacts have changed
+          const hasChanged =
+            JSON.stringify(newContacts) !== JSON.stringify(lastContacts);
+
+          if (hasChanged) {
+            lastContacts = newContacts;
+            send({ contacts: newContacts });
+          }
+        },
+        (err) => {
+          console.error('❌ SSE update error:', err);
+          send({ error: 'SSE connection error' });
+        }
+      );
+
+      // 4️⃣ Cleanup on disconnect
+      req.on('close', () => {
+        unsubscribe();
+        res.end();
+      });
+    } catch (err) {
+      console.error('❌ SSE setup error:', err);
+      send({ error: 'Internal server error' });
+      res.end();
+    }
+  });
+
+  app.get('/api/account/get-contacts/:clerkId', async (req, res) => {
+    const { clerkId } = req.params;
+
+    try {
+      // 1️⃣ Find the user by Clerk ID
+      const user = await convex.query(api.user.getUserByClerkId, { clerkId });
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+
+      // 2️⃣ Extract contact IDs from metadata
+      const contactIds = user.metadata?.contacts?.map((c) => c.id) || [];
+
+      if (contactIds.length === 0) {
+        return res.json({ contacts: [] });
+      }
+
+      // 3️⃣ Fetch each contact's user record
+      const contacts = await Promise.all(
+        contactIds.map(async (id) => {
+          const cUser = await convex.query(api.user.getUserById, { id });
+          if (!cUser) return null;
+
+          return {
+            clerk_id: cUser.clerk_id,
+            firstName: cUser.name.firstName,
+            phoneNumber: cUser.phoneNumber,
+          };
+        })
+      );
+
+      // 4️⃣ Filter out nulls in case some contacts were deleted
+      const validContacts = contacts.filter(Boolean);
+
+      // 5️⃣ Return the list
+      res.json({ contacts: validContacts });
+    } catch (err) {
+      console.error('❌ Failed to fetch contacts:', err);
+      res.status(500).json({ error: 'Internal server error' });
     }
   });
 

@@ -11,6 +11,7 @@ export const createUserWithAccountAndCard = mutation({
   args: {
     clerkId: v.string(),
     email: v.string(),
+    number: v.string(),
     name: v.object({ firstName: v.string(), lastName: v.string() }),
     address: v.object({
       line1: v.string(),
@@ -21,18 +22,21 @@ export const createUserWithAccountAndCard = mutation({
       country: v.string(),
     }),
   },
-  handler: async (ctx, { clerkId, email, name, address }) => {
+  handler: async (ctx, { clerkId, email, name, address, number }) => {
     // 1. Create user (account reference optional because we update it later)
     const userDoc = await ctx.db.insert('user', {
       name,
       email,
       clerk_id: clerkId,
       address,
+      phoneNumber: number,
+      metadata: { contacts: [] },
+
       // account field is now optional in schema, so omit or undefined
       // account: undefined
     });
 
-    // 2. Create account linked to this user
+    // 2. Create account linked to this users
     const accountNumber = generateCardNumber(12);
     const routingNumber = generateCardNumber(9);
     const accountDoc = await ctx.db.insert('account', {
@@ -80,5 +84,56 @@ export const getUserByClerkId = query({
       .filter((q) => q.eq(q.field('clerk_id'), clerkId))
       .first();
     return user || null;
+  },
+});
+
+export const getUserByPhoneNumber = query({
+  args: { phoneNumber: v.string() },
+  handler: async (ctx, { phoneNumber }) => {
+    const user = await ctx.db
+      .query('user')
+      .withIndex('by_phoneNumber', (q) => q.eq('phoneNumber', phoneNumber))
+      .first();
+
+    return user || null;
+  },
+});
+
+export const addContactToUser = mutation({
+  args: {
+    targetClerkId: v.string(),
+    contact: v.object({
+      id: v.id('user'),
+      phoneNumber: v.string(),
+    }),
+  },
+  handler: async (ctx, { targetClerkId, contact }) => {
+    // Find the target user by their Clerk ID
+    const targetUser = await ctx.db
+      .query('user')
+      .withIndex('by_clerkId', (q) => q.eq('clerk_id', targetClerkId))
+      .first();
+
+    if (!targetUser) throw new Error('Target user not found');
+
+    // Retrieve existing contacts or create an empty array
+    const contacts = targetUser.metadata?.contacts || [];
+
+    contacts.push(contact);
+    await ctx.db.patch(targetUser._id, {
+      metadata: { contacts },
+    });
+
+    // Return the updated user document
+    return await ctx.db.get(targetUser._id);
+  },
+});
+
+export const getUserById = query({
+  args: { id: v.id('user') },
+  handler: async (ctx, { id }) => {
+    const user = await ctx.db.get(id);
+    if (!user) return null;
+    return user;
   },
 });

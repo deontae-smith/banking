@@ -33,15 +33,27 @@ const C_ExpirationObject = v.object({
   year: v.string(), // e.g. "28" or "2028"
 });
 
+const C_UserMetadata = v.object({
+  contacts: v.array(
+    v.object({
+      id: v.id('user'),
+      phoneNumber: v.string(),
+    })
+  ),
+});
+
 export default defineSchema({
   user: defineTable({
     name: C_NameObject,
     email: v.string(),
     clerk_id: v.string(),
     address: C_AddressObject,
-    // Make the account field optional:
+    phoneNumber: v.string(),
     account: v.optional(v.id('account')),
-  }).index('by_clerkId', ['clerk_id']),
+    metadata: C_UserMetadata,
+  })
+    .index('by_clerkId', ['clerk_id'])
+    .index('by_phoneNumber', ['phoneNumber']),
 
   account: defineTable({
     number: v.string(),

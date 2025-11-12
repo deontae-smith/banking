@@ -110,7 +110,7 @@ export function Homescreen({ navigation }: any) {
 
         {visible && (
           <>
-            <Text style={styles.cardNumber}>8729 9128 7643 0274</Text>
+            <Text style={styles.cardNumber}>{account?.card?.number}</Text>
             <View style={{ flexDirection: 'row', gap: 20, marginTop: -10 }}>
               <Text style={styles.cardInfo}>CVV: 671</Text>
               <Text style={styles.cardInfo}>EXP: 12/27</Text>
