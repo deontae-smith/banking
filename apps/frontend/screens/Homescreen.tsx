@@ -1,26 +1,96 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { useUserAccount } from '@/hooks/useAccountData';
-import { useAuth, useUser } from '@clerk/clerk-expo';
-import { Ionicons } from '@expo/vector-icons';
-import { getGreeting } from '@/utils';
-import Visa from '@/components/card/visa';
+import { useUserAccount } from "@/hooks/useAccountData";
+import { useAuth, useUser } from "@clerk/clerk-expo";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import React, { useRef, useState, useEffect } from "react";
+import Swipeable from "react-native-gesture-handler/ReanimatedSwipeable";
+import {
+  Animated,
+  FlatList,
+  Modal,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export function Homescreen({ navigation }: any) {
   const { signOut } = useAuth();
+
+  // Example transactions with statuses
+  const transactions = [
+    {
+      id: "1",
+      name: "Uber",
+      amount: 34.0,
+      time: "Today • 08:48 PM",
+      status: "pending",
+    },
+    {
+      id: "2",
+      name: "Airbnb",
+      amount: 128.0,
+      time: "Yesterday • 10:12 AM",
+      status: "completed",
+    },
+    {
+      id: "3",
+      name: "Apple",
+      amount: 15.99,
+      time: "Nov 10 • 02:40 PM",
+      status: "pending",
+    },
+  ];
+
+  // Separate transactions by status
+  const pendingTransactions = transactions.filter(
+    (t) => t.status === "pending"
+  );
+  const completedTransactions = transactions.filter(
+    (t) => t.status === "completed"
+  );
+
+  const [visible, setVisible] = useState(false);
+  const fadeAnim = useRef(new Animated.Value(0)).current;
   const { user } = useUser();
-  const { account, loading } = useUserAccount(user?.id);
+  const { account, loading, error } = useUserAccount(user?.id);
+
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good Morning,";
+    if (hour < 18) return "Good Afternoon,";
+    return "Good Evening,";
+  };
 
   const handleSignOut = async () => {
     try {
       await signOut();
-      navigation.replace('LoginScreen');
+      navigation.replace("LoginScreen"); // replace to avoid going back
     } catch (err) {
-      throw new Error('Error signing out, please try again');
+      console.log("Error signing out:", err);
     }
   };
 
-  if (loading || !account) return;
+  const openModal = () => {
+    setVisible(!visible);
+  };
+
+  const [locked, setLocked] = useState(false);
+
+  useEffect(() => {
+    let timer;
+
+    // If details are visible, start 30-second timer
+    if (visible) {
+      timer = setTimeout(() => {
+        setVisible(false);
+      }, 10000); // 30 seconds
+    }
+
+    // Cleanup when component unmounts or when user toggles early
+    return () => clearTimeout(timer);
+  }, [visible]);
 
   return (
     <View style={styles.container}>
@@ -29,7 +99,71 @@ export function Homescreen({ navigation }: any) {
         <Text style={styles.userName}>{user?.firstName}</Text>
       </TouchableOpacity>
       {/* Visa Card */}
-      <Visa account={account} />
+      <LinearGradient
+        colors={["#1E293B", "#1E40AF", "#1E3A8A", "#0F172A"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={styles.balanceCard}
+      >
+        <View style={styles.cardHeader}>
+          <Text style={styles.cardName}>{user?.fullName}</Text>
+          <Text style={styles.cardBrand}>VISA</Text>
+        </View>
+
+        {visible && (
+          <>
+            <Text style={styles.cardNumber}>8729 9128 7643 0274</Text>
+            <View style={{ flexDirection: "row", gap: 20, marginTop: -10 }}>
+              <Text style={styles.cardInfo}>CVV: 671</Text>
+              <Text style={styles.cardInfo}>EXP: 12/27</Text>
+            </View>
+          </>
+        )}
+
+        <View style={styles.balanceRow}>
+          <View style={{ flexDirection: "column" }}>
+            <Text style={styles.label}>Available Balance</Text>
+            <Text style={styles.balanceAmount}>${account?.card?.balance}</Text>
+          </View>
+
+          <TouchableOpacity onPress={openModal}>
+            <Ionicons
+              name={visible ? "eye-off-outline" : "eye-outline"}
+              size={22}
+              color="white"
+            />
+          </TouchableOpacity>
+        </View>
+        {locked && (
+          <View style={styles.lockOverlay}>
+            <Ionicons name="lock-closed" size={50} color="white" />
+          </View>
+        )}
+      </LinearGradient>
+      {/* Send/Receive Buttons */}
+      <View style={styles.transferContainer}>
+        <TouchableOpacity
+          style={[
+            styles.receiveBtn,
+            { backgroundColor: locked ? "#1D4ED8" : "#d2d2d25f" },
+          ]}
+          onPress={() => setLocked(!locked)}
+        >
+          {locked && <Ionicons name="lock-closed" size={18} color="#fff" />}
+          <Text
+            style={[styles.receiveText, { color: locked ? "#fff" : "#000" }]}
+          >
+            {locked ? "Unlock" : "Lock"}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.sendBtn}
+          onPress={() => navigation.navigate("Sendscreen")}
+        >
+          <Text style={styles.sendText}>Send</Text>
+        </TouchableOpacity>
+      </View>
       {/* Expense Cards */}
       <View style={styles.expenseRow}>
         <View style={styles.expenseCard}>
@@ -48,7 +182,7 @@ export function Homescreen({ navigation }: any) {
       </View>
       <View style={{ marginTop: 20 }}>
         {/* Only show Pending section if there are any pending transactions */}
-        {/* {pendingTransactions.length > 0 && (
+        {pendingTransactions.length > 0 && (
           <>
             <Text style={styles.sectionHeader}>Pending</Text>
             {pendingTransactions.map((item) => (
@@ -68,10 +202,10 @@ export function Homescreen({ navigation }: any) {
               </View>
             ))}
           </>
-        )} */}
+        )}
 
         {/* Only show Completed section if there are any completed transactions */}
-        {/* {completedTransactions.length > 0 && (
+        {completedTransactions.length > 0 && (
           <>
             <Text style={styles.sectionHeader}>Completed</Text>
             {completedTransactions.map((item) => (
@@ -91,35 +225,7 @@ export function Homescreen({ navigation }: any) {
               </View>
             ))}
           </>
-        )} */}
-      </View>
-      {/* Card Info Modal */}
-      {/* <Modal transparent visible={visible} animationType="none">
-        <Pressable style={styles.modalOverlay} onPress={closeModal}>
-          <Animated.View
-            style={[
-              styles.modalContainer,
-              { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-            ]}
-          >
-            <Text style={styles.modalTitle}>Card Information</Text>
-            <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>Card Number</Text>
-              <Text style={styles.infoValue}>8729 9128 7643 0274</Text>
-            </View>
-            <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>Expiry Date</Text>
-              <Text style={styles.infoValue}>12/27</Text>
-            </View>
-            <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>CVV</Text>
-              <Text style={styles.infoValue}>***</Text>
-            </View>
-          </Animated.View>
-        </Pressable>
-      </Modal> */}
-      <View style={styles.fdicContainer}>
-        <Text style={styles.fdicText}>Member FDIC</Text>
+        )}
       </View>
     </View>
   );
@@ -153,6 +259,20 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     elevation: 6,
   },
+  cardHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  cardName: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "500",
+  },
+  cardBrand: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "700",
+  },
   sectionHeader: {
     fontSize: 14,
     fontWeight: "600",
@@ -161,10 +281,77 @@ const styles = StyleSheet.create({
     marginTop: 16,
     textTransform: "uppercase",
   },
-  transactionHeader: {
-    color: 'grey',
-    fontSize: 12,
-    marginTop: 50,
+  label: {
+    color: "#cbd5e1",
+    fontSize: 13,
+  },
+  balanceRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  cardNumber: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 22,
+  },
+  cardInfo: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 14,
+  },
+  balanceAmount: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 32,
+  },
+  lockOverlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0,0,0,0.6)", // semi-transparent tint
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 20,
+  },
+  transferContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 25,
+  },
+  receiveBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    // backgroundColor: "#d2d2d25f",
+    height: 55,
+    borderRadius: 25,
+    flex: 1,
+    marginRight: 10,
+  },
+  sendBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#000",
+    height: 55,
+    borderRadius: 25,
+    flex: 1,
+    marginLeft: 10,
+  },
+  receiveText: {
+    fontWeight: "600",
+    color: "#000",
+    // marginLeft: 8,
+    fontSize: 16,
+  },
+  sendText: {
+    fontWeight: "600",
+    color: "#fff",
+    marginLeft: 8,
+    fontSize: 16,
   },
   expenseRow: {
     flexDirection: "row",
@@ -283,21 +470,5 @@ const styles = StyleSheet.create({
     color: "#111827",
     fontWeight: "600",
     fontSize: 15,
-  },
-  // FDIC footer
-  fdicContainer: {
-    position: 'absolute',
-    bottom: 20,
-    alignSelf: 'center',
-    flexDirection: 'row',
-    alignItems: 'center',
-    opacity: 0.8,
-  },
-  fdicText: {
-    color: '#9ca3af',
-    fontWeight: '400',
-    fontSize: 8,
-    letterSpacing: 0.5,
-    // fontFamily: 'System',
   },
 });
