@@ -269,6 +269,91 @@ export async function createServer() {
     }
   });
 
+  app.post('/api/account/send', async (req, res) => {
+    try {
+      const { senderClerkId, recipientClerkId, recipientPhoneNumber, amount } =
+        req.body;
+      if (
+        !senderClerkId ||
+        !recipientClerkId ||
+        !recipientPhoneNumber ||
+        !amount
+      ) {
+        return res.status(400).json({ error: 'Missing required fields' });
+      }
+      if (amount <= 0) {
+        return res
+          .status(400)
+          .json({ error: 'Amount must be greater than zero' });
+      }
+      // Fetch sender and account
+      const sender = await convex.query(api.user.getUserByClerkId, {
+        clerkId: senderClerkId,
+      });
+      if (!sender || !sender.account)
+        return res
+          .status(404)
+          .json({ error: 'Sender not found or no account' });
+      const senderAccount = await convex.query(api.account.getAccountById, {
+        accountId: sender.account,
+      });
+      if (!senderAccount || !senderAccount.card)
+        return res.status(404).json({ error: 'Sender account/card not found' });
+      const senderCard = await convex.query(api.card.getCardById, {
+        id: senderAccount.card,
+      });
+      if (!senderCard)
+        return res.status(404).json({ error: 'Sender card not found' });
+      if (senderCard.balance < amount)
+        return res.status(400).json({ error: 'Insufficient funds' });
+      // Fetch recipient and account
+      const recipient = await convex.query(api.user.getUserByClerkId, {
+        clerkId: recipientClerkId,
+      });
+      if (!recipient || !recipient.account)
+        return res
+          .status(404)
+          .json({ error: 'Recipient not found or no account' });
+      if (recipient.phoneNumber !== recipientPhoneNumber) {
+        // Remove recipient from sender contacts
+        const updatedContacts = (sender.metadata?.contacts || []).filter(
+          (c: any) => c.id !== recipient._id
+        );
+        await convex.mutation(api.user.updateContacts, {
+          userId: sender._id,
+          contacts: updatedContacts,
+        });
+        return res.status(400).json({
+          error:
+            'Recipient phone number mismatch. User removed from your contacts. Please re-add to send money.',
+        });
+      }
+      const recipientAccount = await convex.query(api.account.getAccountById, {
+        accountId: recipient.account,
+      });
+      if (!recipientAccount || !recipientAccount.card)
+        return res
+          .status(404)
+          .json({ error: 'Recipient account/card not found' });
+      // ✅ Perform the transaction via Convex mutation
+      const transactionResult = await convex.mutation(api.card.sendMoney, {
+        senderCardId: senderCard._id,
+        recipientCardId: recipientAccount.card,
+        amount: Number(amount),
+      });
+      return res.json({
+        message: 'Transaction successful!',
+        senderBalance: transactionResult.senderNewBalance,
+        recipientBalance: transactionResult.recipientNewBalance,
+      });
+    } catch (err: any) {
+      console.error('❌ Send Money Error:', err);
+      return res
+        .status(500)
+        .json({ error: 'Server error', details: err.message });
+    }
+  });
+
   const PORT = process.env.PORT || 8090;
   app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 

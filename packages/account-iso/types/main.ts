@@ -15,6 +15,11 @@ export interface AddressObject {
   country: string;
 }
 
+export interface ReturnedUserContact {
+  clerk_id: string;
+  firstName: string;
+  phoneNumber: string;
+}
 export interface CardMeta {
   isLocked: boolean;
   spendingLimit: number;

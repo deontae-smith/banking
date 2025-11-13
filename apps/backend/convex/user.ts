@@ -137,3 +137,28 @@ export const getUserById = query({
     return user;
   },
 });
+
+export const updateContacts = mutation({
+  args: {
+    userId: v.id('user'),
+    contacts: v.array(
+      v.object({
+        id: v.id('user'),
+        phoneNumber: v.string(),
+      })
+    ),
+  },
+  handler: async ({ db }, { userId, contacts }) => {
+    const user = await db.get(userId);
+    if (!user) throw new Error('User not found');
+
+    await db.patch(userId, {
+      metadata: {
+        ...user.metadata,
+        contacts,
+      },
+    });
+
+    return { success: true, contacts };
+  },
+});

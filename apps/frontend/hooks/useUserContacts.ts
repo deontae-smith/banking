@@ -1,15 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import EventSource from 'react-native-sse';
 import { getBackendUrl } from '@/libs/getAPIUrl';
-
-export interface UserContact {
-  clerk_id: string;
-  firstName: string;
-  phoneNumber: string;
-}
+import { ReturnedUserContact } from '@ob/account-iso';
 
 interface UseUserContactsResult {
-  contacts: UserContact[] | null;
+  contacts: ReturnedUserContact[] | null;
   loading: boolean;
   error: string | null;
 }
@@ -17,7 +12,7 @@ interface UseUserContactsResult {
 const RECONNECT_INTERVAL_MS = 5000;
 
 export function useUserContacts(clerkId?: string): UseUserContactsResult {
-  const [contacts, setContacts] = useState<UserContact[] | null>(null);
+  const [contacts, setContacts] = useState<ReturnedUserContact[] | null>(null);
   const [loading, setLoading] = useState<boolean>(!!clerkId);
   const [error, setError] = useState<string | null>(null);
 

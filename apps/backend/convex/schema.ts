@@ -70,5 +70,5 @@ export default defineSchema({
     metadata: C_CardMeta,
     balance: v.number(),
     account: v.id('account'),
-  }),
+  }).index('by_account', ['account']),
 });

@@ -15,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { getBackendUrl } from '@/libs/getAPIUrl';
 import { useUser } from '@clerk/clerk-expo';
 import { useUserContacts } from '@/hooks/useUserContacts';
+import { useSendMoney } from '@/hooks/useSendMoneyProcess';
 
 interface UserContact {
   clerk_id: string;
@@ -37,8 +38,6 @@ export function SendScreen({ navigation }: any) {
 
   const { user } = useUser();
   const { contacts } = useUserContacts(user?.id);
-
-  console.log(contacts, 'hi');
 
   const triggerShake = () => {
     Animated.sequence([
@@ -250,7 +249,11 @@ export function SendScreen({ navigation }: any) {
           onPress={() => {
             if (receiver && amount) {
               navigation.navigate('SendConfirmation', {
-                receiver: receiver.firstName,
+                receiver: {
+                  clerk_id: receiver.clerk_id,
+                  firstName: receiver.firstName,
+                  phoneNumber: receiver.phoneNumber,
+                },
                 amount: amount,
               });
             }

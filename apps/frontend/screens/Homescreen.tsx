@@ -47,10 +47,6 @@ export function Homescreen({ navigation }: any) {
         </View>
       </View>
       <View style={{ marginTop: 20 }}>
-        <Text style={styles.transactionHeader}>
-          Tranaction(s) will appear here
-        </Text>
-
         {/* Only show Pending section if there are any pending transactions */}
         {/* {pendingTransactions.length > 0 && (
           <>
@@ -122,6 +118,9 @@ export function Homescreen({ navigation }: any) {
           </Animated.View>
         </Pressable>
       </Modal> */}
+      <View style={styles.fdicContainer}>
+        <Text style={styles.fdicText}>Member FDIC</Text>
+      </View>
     </View>
   );
 }
@@ -284,5 +283,21 @@ const styles = StyleSheet.create({
     color: '#111827',
     fontWeight: '600',
     fontSize: 15,
+  },
+  // FDIC footer
+  fdicContainer: {
+    position: 'absolute',
+    bottom: 20,
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    opacity: 0.8,
+  },
+  fdicText: {
+    color: '#9ca3af',
+    fontWeight: '400',
+    fontSize: 8,
+    letterSpacing: 0.5,
+    // fontFamily: 'System',
   },
 });
