@@ -1,17 +1,18 @@
-import { ClerkProvider, useUser } from '@clerk/clerk-expo';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Constants from 'expo-constants';
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Text, View } from 'react-native';
+import { ClerkProvider, useUser } from "@clerk/clerk-expo";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Constants from "expo-constants";
+import React, { useEffect, useState } from "react";
+import { ActivityIndicator, Text, View } from "react-native";
 import {
   Homescreen,
   LoginScreen,
   SendScreen,
   SendConfirmation,
-} from './screens';
-import { tokenCache } from './tokenCache';
-import 'react-native-url-polyfill/auto';
+  ContactList,
+} from "./screens";
+import { tokenCache } from "./tokenCache";
+import "react-native-url-polyfill/auto";
 
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
@@ -26,9 +27,9 @@ export function NavigationController() {
     if (!isLoaded) return;
 
     if (user) {
-      setInitialRoute('Homescreen');
+      setInitialRoute("Homescreen");
     } else {
-      setInitialRoute('LoginScreen');
+      setInitialRoute("LoginScreen");
     }
   }, [isLoaded, user]);
 
@@ -38,12 +39,12 @@ export function NavigationController() {
       <View
         style={{
           flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: '#fff',
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#fff",
         }}
       >
-        <ActivityIndicator size='large' color='#000' />
+        <ActivityIndicator size="large" color="#000" />
       </View>
     );
   }
@@ -53,10 +54,11 @@ export function NavigationController() {
       screenOptions={{ headerShown: false }}
       initialRouteName={initialRoute}
     >
-      <Stack.Screen name='LoginScreen' component={LoginScreen} />
-      <Stack.Screen name='Homescreen' component={Homescreen} />
-      <Stack.Screen name='Sendscreen' component={SendScreen} />
-      <Stack.Screen name='SendConfirmation' component={SendConfirmation} />
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="Homescreen" component={Homescreen} />
+      <Stack.Screen name="Sendscreen" component={SendScreen} />
+      <Stack.Screen name="SendConfirmation" component={SendConfirmation} />
+      <Stack.Screen name="ContactList" component={ContactList} />
     </Stack.Navigator>
   );
 }
@@ -67,7 +69,7 @@ export default function App() {
 
   if (!publishableKey) {
     console.error(
-      'Missing Clerk publishable key! Check your .env or app.config.js'
+      "Missing Clerk publishable key! Check your .env or app.config.js"
     );
     return <Text>Configuration error</Text>;
   }
