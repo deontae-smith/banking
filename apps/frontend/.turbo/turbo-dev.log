@@ -977,3 +977,24 @@ ERR_NGROK_3200
 [7m[37m[1m LOG [22m[39m[27m true data from hook
 [7m[37m[1m LOG [22m[39m[27m false data from hook
 [7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
+[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
+[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
+[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
+[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendScreen.tsx: Unexpected token (140:52)
+
+[0m [90m 138 |[39m       {[90m/* Header */[39m}
+ [90m 139 |[39m       [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mheader}[33m>[39m
+[31m[1m>[22m[39m[90m 140 |[39m         [33m<[39m[33mTouchableOpacity[39m onPress[33m=[39m{() [33m=>[39m navigation[33m.[39m}[33m>[39m
+ [90m     |[39m                                                     [31m[1m^[22m[39m
+ [90m 141 |[39m           [33m<[39m[33mIonicons[39m name[33m=[39m[32m"arrow-back-sharp"[39m size[33m=[39m{[35m24[39m} color[33m=[39m[32m"black"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m         [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
+ [90m 143 |[39m[0m
+[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendScreen.tsx: Unexpected token (140:52)
+
+[0m [90m 138 |[39m       {[90m/* Header */[39m}
+ [90m 139 |[39m       [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mheader}[33m>[39m
+[31m[1m>[22m[39m[90m 140 |[39m         [33m<[39m[33mTouchableOpacity[39m onPress[33m=[39m{() [33m=>[39m navigation[33m.[39m}[33m>[39m
+ [90m     |[39m                                                     [31m[1m^[22m[39m
+ [90m 141 |[39m           [33m<[39m[33mIonicons[39m name[33m=[39m[32m"arrow-back-sharp"[39m size[33m=[39m{[35m24[39m} color[33m=[39m[32m"black"[39m [33m/[39m[33m>[39m
+ [90m 142 |[39m         [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
+ [90m 143 |[39m[0m]
