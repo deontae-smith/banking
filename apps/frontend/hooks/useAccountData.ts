@@ -1,15 +1,16 @@
-import { getBackendUrl } from '@/libs/getAPIUrl';
-import { useEffect, useState, useRef } from 'react';
-import EventSource from 'react-native-sse';
-import { UseUserAccountResult, RetunredAccountData } from '@ob/account-iso';
-import { Card } from '@ob/account-iso';
+import { useEffect, useState, useRef } from "react";
+import EventSource from "react-native-sse";
+import { UseUserAccountResult, AccountDataPayload } from "@ob/account-iso";
+import { Card } from "@ob/account-iso";
+import { getBackendUrl } from "@/libs/getAPIUrl";
 
 const RECONNECT_INTERVAL_MS = 5000;
 
 export function useUserAccount(clerkId?: string): UseUserAccountResult {
-  const [account, setAccount] = useState<RetunredAccountData | null>(null);
+  const [account, setAccount] = useState<AccountDataPayload | null>(null);
   const [loading, setLoading] = useState<boolean>(!!clerkId);
   const [error, setError] = useState<string | null>(null);
+  const [isCardLocked, setIsCardLocked] = useState<boolean | null>(null);
 
   const eventSourceRef = useRef<EventSource | null>(null);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -17,36 +18,75 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
   const backendUrl = getBackendUrl();
   const url =
     clerkId && backendUrl
-      ? `${backendUrl}/api/account/subscribe/${clerkId}`
+      ? `${backendUrl}/api/account/subscribe/${encodeURIComponent(clerkId)}`
       : null;
 
   const fetchCard = async (cardId: string) => {
     try {
-      const res = await fetch(`${backendUrl}/api/account/card/${cardId}`);
+      const res = await fetch(
+        `${backendUrl}/api/account/card/${encodeURIComponent(cardId)}`
+      );
       const data = await res.json();
       return data.card as Card;
     } catch (err) {
-      console.error('Failed to fetch card:', err);
+      console.error("Failed to fetch card:", err);
       return null;
     }
   };
 
+  const handleLockingFeature = async (cardId: string, status: boolean) => {
+    try {
+      const res = await fetch(
+        `${backendUrl}/api/accounts/cards/${encodeURIComponent(cardId)}/lock/${status}`,
+        {
+          method: "POST",
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+
+      const { newStatus } = await res.json();
+
+      console.log(newStatus, "data from hook");
+
+      if (newStatus === undefined) {
+        throw new Error("Failed to update lock status");
+      }
+      setIsCardLocked(newStatus);
+      return newStatus;
+    } catch (err) {
+      console.error("Error locking card:", err);
+      throw err; // rethrow so caller can handle
+    }
+  };
+
   const connect = () => {
-    if (!clerkId || !backendUrl) {
+    if (!clerkId || !backendUrl || !url) {
       setLoading(false);
-      setError('No user ID or backend URL provided');
+      setError("No user ID or backend URL provided");
       return;
     }
 
     setLoading(true);
     setError(null);
 
-    const es = new EventSource(url!);
+    // close any previous connection
+    if (eventSourceRef.current) {
+      eventSourceRef.current.close();
+      eventSourceRef.current = null;
+    }
+
+    const es = new EventSource(url);
     eventSourceRef.current = es;
 
-    es.addEventListener('open', () => {});
+    es.addEventListener("open", () => {
+      // connection opened
+      console.debug("SSE connection opened for clerkId", clerkId);
+    });
 
-    es.addEventListener('message', async (event: any) => {
+    es.addEventListener("message", async (event: any) => {
       try {
         const payload = JSON.parse(event.data);
 
@@ -56,29 +96,32 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
           return;
         }
 
-        let accountData: RetunredAccountData = payload.account;
+        let accountData: AccountDataPayload = payload.account;
 
-        // If cardId exists, fetch the card info
+        // If cardId exists, fetch card info
         if (payload.account?.card) {
           const cardInfo = await fetchCard(payload.account.card);
           accountData = { ...accountData, card: cardInfo };
         }
 
         setAccount(accountData);
+        setIsCardLocked(accountData.card?.metadata.isLocked ?? null);
         setError(null);
         setLoading(false);
       } catch (parseErr) {
-        console.error('Failed to parse SSE message', parseErr);
-        setError('Invalid data from server');
+        console.error("Failed to parse SSE message", parseErr);
+        setError("Invalid data from server");
         setLoading(false);
       }
     });
 
-    es.addEventListener('error', (err: any) => {
-      console.warn('SSE connection error', err);
+    es.addEventListener("error", (err: any) => {
+      console.warn("SSE connection error:", err);
       es.close();
       // schedule reconnection
-      reconnectTimerRef.current = setTimeout(connect, RECONNECT_INTERVAL_MS);
+      reconnectTimerRef.current = setTimeout(() => {
+        connect();
+      }, RECONNECT_INTERVAL_MS);
     });
   };
 
@@ -97,5 +140,5 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     };
   }, [clerkId, backendUrl]);
 
-  return { account, loading, error };
+  return { handleLockingFeature, account, loading, error, isCardLocked };
 }

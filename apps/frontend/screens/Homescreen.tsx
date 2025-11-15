@@ -1,26 +1,31 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { useUserAccount } from '@/hooks/useAccountData';
-import { useAuth, useUser } from '@clerk/clerk-expo';
-import { Ionicons } from '@expo/vector-icons';
-import { getGreeting } from '@/utils';
-import Visa from '@/components/card/visa';
+import React, { useRef, useState, useEffect } from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useAuth, useUser } from "@clerk/clerk-expo";
+import { Ionicons } from "@expo/vector-icons";
+import { getGreeting } from "@/utils";
+import Visa from "@/components/card/visa";
+import { useUserAccount } from "@/hooks/useAccountData";
 
 export function Homescreen({ navigation }: any) {
   const { signOut } = useAuth();
   const { user } = useUser();
-  const { account, loading } = useUserAccount(user?.id);
+  const {
+    account,
+    loading,
+    handleLockingFeature: lockController,
+    isCardLocked,
+  } = useUserAccount(user?.id);
 
   const handleSignOut = async () => {
     try {
       await signOut();
-      navigation.replace('LoginScreen');
+      navigation.replace("LoginScreen");
     } catch (err) {
-      throw new Error('Error signing out, please try again');
+      throw new Error("Error signing out, please try again");
     }
   };
 
-  if (loading || !account) return;
+  if (!user || !account || loading) return;
 
   return (
     <View style={styles.container}>
@@ -29,7 +34,11 @@ export function Homescreen({ navigation }: any) {
         <Text style={styles.userName}>{user?.firstName}</Text>
       </TouchableOpacity>
       {/* Visa Card */}
-      <Visa account={account} />
+      <Visa
+        account={account}
+        handleLockingFeature={lockController}
+        isCardLocked={isCardLocked}
+      />
       {/* Expense Cards */}
       <View style={styles.expenseRow}>
         <View style={styles.expenseCard}>
@@ -162,7 +171,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   transactionHeader: {
-    color: 'grey',
+    color: "grey",
     fontSize: 12,
     marginTop: 50,
   },
@@ -286,16 +295,16 @@ const styles = StyleSheet.create({
   },
   // FDIC footer
   fdicContainer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 20,
-    alignSelf: 'center',
-    flexDirection: 'row',
-    alignItems: 'center',
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "center",
     opacity: 0.8,
   },
   fdicText: {
-    color: '#9ca3af',
-    fontWeight: '400',
+    color: "#9ca3af",
+    fontWeight: "400",
     fontSize: 8,
     letterSpacing: 0.5,
     // fontFamily: 'System',

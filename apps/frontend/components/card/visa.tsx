@@ -7,25 +7,30 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { RetunredAccountData } from "@ob/account-iso";
+import { AccountDataPayload, CardLockingFunction } from "@ob/account-iso";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useUser } from "@clerk/clerk-expo";
 
 type VisaCardProps = {
-  account: RetunredAccountData;
+  account: AccountDataPayload;
+  handleLockingFeature: CardLockingFunction;
+  isCardLocked: boolean | null;
 };
 
-const Visa = ({ account }: VisaCardProps) => {
+const Visa = ({
+  account,
+  handleLockingFeature,
+  isCardLocked,
+}: VisaCardProps) => {
   const [cardDetailsVisible, setCardDetailsVisible] = useState(false);
+
   const { user } = useUser();
   const navigation = useNavigation();
 
   const openModal = () => {
     setCardDetailsVisible(!cardDetailsVisible);
   };
-
-  const [locked, setLocked] = useState(false);
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
@@ -81,7 +86,7 @@ const Visa = ({ account }: VisaCardProps) => {
             />
           </TouchableOpacity>
         </View>
-        {locked && (
+        {isCardLocked && (
           <View style={styles.lockOverlay}>
             <Ionicons name="lock-closed" size={50} color="white" />
           </View>
@@ -92,22 +97,31 @@ const Visa = ({ account }: VisaCardProps) => {
         <TouchableOpacity
           style={[
             styles.receiveBtn,
-            { backgroundColor: locked ? "#1D4ED8" : "#d2d2d25f" },
+            { backgroundColor: isCardLocked ? "#1D4ED8" : "#d2d2d25f" },
           ]}
-          onPress={() => setLocked(!locked)}
+          onPress={() => handleLockingFeature(account.card?._id, isCardLocked!)}
         >
-          {locked && <Ionicons name="lock-closed" size={18} color="#fff" />}
+          {isCardLocked && (
+            <Ionicons name="lock-closed" size={18} color="#fff" />
+          )}
           <Text
-            style={[styles.receiveText, { color: locked ? "#fff" : "#000" }]}
+            style={[
+              styles.receiveText,
+              { color: isCardLocked ? "#fff" : "#000" },
+            ]}
           >
-            {locked ? "Unlock" : "Lock"}
+            {isCardLocked ? "Unlock" : "Lock"}
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={styles.sendBtn}
+          style={[
+            styles.sendBtn,
+            isCardLocked && { opacity: 0.4 }, // visual feedback
+          ]}
           //   @ts-ignore
           onPress={() => navigation.navigate("Sendscreen")}
+          disabled={isCardLocked}
         >
           {/* <Ionicons name="arrow-down" size={20} color="#fff" /> */}
           <Text style={styles.sendText}>Send</Text>
