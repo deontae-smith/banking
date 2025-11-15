@@ -1,13 +1,13 @@
-import { getBackendUrl } from '@/libs/getAPIUrl';
 import { useEffect, useState, useRef } from 'react';
 import EventSource from 'react-native-sse';
-import { UseUserAccountResult, RetunredAccountData } from '@ob/account-iso';
+import { UseUserAccountResult, AccountDataPayload } from '@ob/account-iso';
 import { Card } from '@ob/account-iso';
+import { getBackendUrl } from '@/libs/getAPIUrl';
 
 const RECONNECT_INTERVAL_MS = 5000;
 
 export function useUserAccount(clerkId?: string): UseUserAccountResult {
-  const [account, setAccount] = useState<RetunredAccountData | null>(null);
+  const [account, setAccount] = useState<AccountDataPayload | null>(null);
   const [loading, setLoading] = useState<boolean>(!!clerkId);
   const [error, setError] = useState<string | null>(null);
 
@@ -17,12 +17,14 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
   const backendUrl = getBackendUrl();
   const url =
     clerkId && backendUrl
-      ? `${backendUrl}/api/account/subscribe/${clerkId}`
+      ? `${backendUrl}/api/account/subscribe/${encodeURIComponent(clerkId)}`
       : null;
 
   const fetchCard = async (cardId: string) => {
     try {
-      const res = await fetch(`${backendUrl}/api/account/card/${cardId}`);
+      const res = await fetch(
+        `${backendUrl}/api/account/card/${encodeURIComponent(cardId)}`
+      );
       const data = await res.json();
       return data.card as Card;
     } catch (err) {
@@ -31,8 +33,35 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     }
   };
 
+  const handleLockingFeature = async (cardId: string, status: boolean) => {
+    try {
+      const res = await fetch(
+        `${backendUrl}/api/accounts/cards/${encodeURIComponent(cardId)}/lock/${status}`,
+        {
+          method: 'POST',
+        }
+      );
+
+      if (!res.ok) {
+        throw new Error(`Request failed with status ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      if (!data || data.success !== true) {
+        throw new Error(data?.message || 'Failed to update lock status');
+      }
+
+      // Return the new status provided by the backend
+      return data.newStatus;
+    } catch (err) {
+      console.error('Error locking card:', err);
+      throw err; // rethrow so caller can handle
+    }
+  };
+
   const connect = () => {
-    if (!clerkId || !backendUrl) {
+    if (!clerkId || !backendUrl || !url) {
       setLoading(false);
       setError('No user ID or backend URL provided');
       return;
@@ -41,10 +70,19 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     setLoading(true);
     setError(null);
 
-    const es = new EventSource(url!);
+    // close any previous connection
+    if (eventSourceRef.current) {
+      eventSourceRef.current.close();
+      eventSourceRef.current = null;
+    }
+
+    const es = new EventSource(url);
     eventSourceRef.current = es;
 
-    es.addEventListener('open', () => {});
+    es.addEventListener('open', () => {
+      // connection opened
+      console.debug('SSE connection opened for clerkId', clerkId);
+    });
 
     es.addEventListener('message', async (event: any) => {
       try {
@@ -56,9 +94,9 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
           return;
         }
 
-        let accountData: RetunredAccountData = payload.account;
+        let accountData: AccountDataPayload = payload.account;
 
-        // If cardId exists, fetch the card info
+        // If cardId exists, fetch card info
         if (payload.account?.card) {
           const cardInfo = await fetchCard(payload.account.card);
           accountData = { ...accountData, card: cardInfo };
@@ -75,10 +113,12 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     });
 
     es.addEventListener('error', (err: any) => {
-      console.warn('SSE connection error', err);
+      console.warn('SSE connection error:', err);
       es.close();
       // schedule reconnection
-      reconnectTimerRef.current = setTimeout(connect, RECONNECT_INTERVAL_MS);
+      reconnectTimerRef.current = setTimeout(() => {
+        connect();
+      }, RECONNECT_INTERVAL_MS);
     });
   };
 
@@ -97,5 +137,5 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     };
   }, [clerkId, backendUrl]);
 
-  return { account, loading, error };
+  return { handleLockingFeature, account, loading, error };
 }

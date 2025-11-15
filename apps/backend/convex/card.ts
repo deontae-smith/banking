@@ -42,3 +42,35 @@ export const sendMoney = mutation({
     };
   },
 });
+
+export const updateCardLockStatus = mutation({
+  args: {
+    cardId: v.id('card'),
+    currentStatus: v.boolean(),
+  },
+  handler: async ({ db }, { cardId, currentStatus }) => {
+    // 1. Fetch card
+    const card = await db.get(cardId);
+    if (!card) throw new Error('Card not found');
+
+    const isLocked = card.metadata.isLocked;
+
+    // 2. Ensure current status matches database
+    if (isLocked !== currentStatus) {
+      throw new Error(
+        `Current status mismatch: expected ${currentStatus}, got ${isLocked}`
+      );
+    }
+
+    // 3. Update card lock status
+    await db.patch(cardId, {
+      metadata: {
+        ...card.metadata,
+        isLocked: !isLocked,
+      },
+    });
+
+    // 4. Return the new status
+    return { success: true, newStatus: !isLocked };
+  },
+});

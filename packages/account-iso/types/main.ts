@@ -67,15 +67,21 @@ export interface Card {
   balance: number;
 }
 
-export interface RetunredAccountData {
+export interface AccountDataPayload {
   number: string;
   routing: string;
   balance: number;
   card: Card | null;
 }
 
+export type CardLockingFunction = (
+  cardId: string,
+  status: boolean
+) => Promise<Card | null>;
+
 export interface UseUserAccountResult {
-  account: RetunredAccountData | null;
+  account: AccountDataPayload | null;
   loading: boolean;
   error: string | null;
+  handleLockingFeature: CardLockingFunction;
 }

@@ -63,6 +63,35 @@ export default defineSchema({
     card: v.optional(v.id('card')),
   }),
 
+  transaction: defineTable({
+    senderIdentifier: v.union(v.id('card'), v.string()), // card ID or external identifier
+    recipientCardId: v.id('card'),
+    amount: v.number(),
+    title: v.string(), //
+    currency: v.string(), // e.g. "USD"
+    type: v.string(), // e.g. "transfer", "deposit", "withdrawal", "payment"
+    status: v.union(
+      v.literal('PENDING'),
+      v.literal('COMPLETED'),
+      v.literal('FAILED'),
+      v.literal('REVERSED')
+    ),
+    timestamp: v.number(), // Unix epoch (Date.now())
+    // reference: v.string(), // unique transaction reference or code
+    metadata: v.optional(
+      v.object({
+        initiatedBy: v.string(), // clerk_id or system
+        method: v.union(v.literal('INSTANT'), v.literal('SCHEDULED')),
+        fees: v.optional(v.number()),
+        location: v.optional(v.string()),
+      })
+    ),
+  })
+    .index('by_senderIdentifier', ['senderIdentifier'])
+    .index('by_recipientCard', ['recipientCardId'])
+    .index('by_status', ['status'])
+    .index('by_timestamp', ['timestamp']),
+
   card: defineTable({
     number: v.string(),
     expiration: C_ExpirationObject,
@@ -70,5 +99,6 @@ export default defineSchema({
     metadata: C_CardMeta,
     balance: v.number(),
     account: v.id('account'),
+    transactions: v.array(v.id('transaction')),
   }).index('by_account', ['account']),
 });
