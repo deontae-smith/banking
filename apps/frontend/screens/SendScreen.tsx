@@ -112,13 +112,23 @@ export function SendScreen({ navigation }: any) {
   };
 
   const handlePress = (val) => {
+    // Handle decimal
     if (val === ".") {
       if (!amount.includes(".")) {
         setAmount((prev) => (prev === "" ? "0." : prev + "."));
       }
-    } else {
-      setAmount((prev) => prev + val);
+      return;
     }
+
+    const newValue = amount + val;
+
+    // If there's a decimal, restrict to 2 decimal places
+    if (newValue.includes(".")) {
+      const decPart = newValue.split(".")[1]; // get only decimals
+      if (decPart.length > 2) return;
+    }
+
+    setAmount(newValue);
   };
 
   const handleDelete = () => setAmount((prev) => prev.slice(0, -1));
