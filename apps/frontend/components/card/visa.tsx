@@ -33,6 +33,10 @@ const Visa = ({
   };
 
   useEffect(() => {
+    if (isCardLocked) {
+      setCardDetailsVisible(false);
+      return; // stop the timer logic
+    }
     let timer: ReturnType<typeof setTimeout>;
 
     if (cardDetailsVisible) {
@@ -42,7 +46,7 @@ const Visa = ({
     }
 
     return () => clearTimeout(timer);
-  }, [cardDetailsVisible]);
+  }, [cardDetailsVisible, isCardLocked]);
 
   return (
     <View>
