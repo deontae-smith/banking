@@ -74,6 +74,11 @@ export interface AccountDataPayload {
   card: Card | null;
 }
 
+export type LockingCardParams = {
+  cardId: string;
+  current: boolean;
+};
+
 export type CardLockingFunction = (
   cardId: string,
   status: boolean
@@ -84,4 +89,5 @@ export interface UseUserAccountResult {
   loading: boolean;
   error: string | null;
   handleLockingFeature: CardLockingFunction;
+  isCardLocked: boolean | null;
 }

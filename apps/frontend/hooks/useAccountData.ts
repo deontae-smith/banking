@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef } from 'react';
-import EventSource from 'react-native-sse';
-import { UseUserAccountResult, AccountDataPayload } from '@ob/account-iso';
-import { Card } from '@ob/account-iso';
-import { getBackendUrl } from '@/libs/getAPIUrl';
+import { useEffect, useState, useRef } from "react";
+import EventSource from "react-native-sse";
+import { UseUserAccountResult, AccountDataPayload } from "@ob/account-iso";
+import { Card } from "@ob/account-iso";
+import { getBackendUrl } from "@/libs/getAPIUrl";
 
 const RECONNECT_INTERVAL_MS = 5000;
 
@@ -10,6 +10,7 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
   const [account, setAccount] = useState<AccountDataPayload | null>(null);
   const [loading, setLoading] = useState<boolean>(!!clerkId);
   const [error, setError] = useState<string | null>(null);
+  const [isCardLocked, setIsCardLocked] = useState<boolean | null>(null);
 
   const eventSourceRef = useRef<EventSource | null>(null);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -28,7 +29,7 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
       const data = await res.json();
       return data.card as Card;
     } catch (err) {
-      console.error('Failed to fetch card:', err);
+      console.error("Failed to fetch card:", err);
       return null;
     }
   };
@@ -38,7 +39,7 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
       const res = await fetch(
         `${backendUrl}/api/accounts/cards/${encodeURIComponent(cardId)}/lock/${status}`,
         {
-          method: 'POST',
+          method: "POST",
         }
       );
 
@@ -46,16 +47,17 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
         throw new Error(`Request failed with status ${res.status}`);
       }
 
-      const data = await res.json();
+      const { newStatus } = await res.json();
 
-      if (!data || data.success !== true) {
-        throw new Error(data?.message || 'Failed to update lock status');
+      console.log(newStatus, "data from hook");
+
+      if (newStatus === undefined) {
+        throw new Error("Failed to update lock status");
       }
-
-      // Return the new status provided by the backend
-      return data.newStatus;
+      setIsCardLocked(newStatus);
+      return newStatus;
     } catch (err) {
-      console.error('Error locking card:', err);
+      console.error("Error locking card:", err);
       throw err; // rethrow so caller can handle
     }
   };
@@ -63,7 +65,7 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
   const connect = () => {
     if (!clerkId || !backendUrl || !url) {
       setLoading(false);
-      setError('No user ID or backend URL provided');
+      setError("No user ID or backend URL provided");
       return;
     }
 
@@ -79,12 +81,12 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     const es = new EventSource(url);
     eventSourceRef.current = es;
 
-    es.addEventListener('open', () => {
+    es.addEventListener("open", () => {
       // connection opened
-      console.debug('SSE connection opened for clerkId', clerkId);
+      console.debug("SSE connection opened for clerkId", clerkId);
     });
 
-    es.addEventListener('message', async (event: any) => {
+    es.addEventListener("message", async (event: any) => {
       try {
         const payload = JSON.parse(event.data);
 
@@ -103,17 +105,18 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
         }
 
         setAccount(accountData);
+        setIsCardLocked(accountData.card?.metadata.isLocked ?? null);
         setError(null);
         setLoading(false);
       } catch (parseErr) {
-        console.error('Failed to parse SSE message', parseErr);
-        setError('Invalid data from server');
+        console.error("Failed to parse SSE message", parseErr);
+        setError("Invalid data from server");
         setLoading(false);
       }
     });
 
-    es.addEventListener('error', (err: any) => {
-      console.warn('SSE connection error:', err);
+    es.addEventListener("error", (err: any) => {
+      console.warn("SSE connection error:", err);
       es.close();
       // schedule reconnection
       reconnectTimerRef.current = setTimeout(() => {
@@ -137,5 +140,5 @@ export function useUserAccount(clerkId?: string): UseUserAccountResult {
     };
   }, [clerkId, backendUrl]);
 
-  return { handleLockingFeature, account, loading, error };
+  return { handleLockingFeature, account, loading, error, isCardLocked };
 }
