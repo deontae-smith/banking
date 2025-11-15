@@ -115,9 +115,13 @@ const Visa = ({
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={styles.sendBtn}
+          style={[
+            styles.sendBtn,
+            isCardLocked && { opacity: 0.4 }, // visual feedback
+          ]}
           //   @ts-ignore
           onPress={() => navigation.navigate("Sendscreen")}
+          disabled={isCardLocked}
         >
           {/* <Ionicons name="arrow-down" size={20} color="#fff" /> */}
           <Text style={styles.sendText}>Send</Text>
