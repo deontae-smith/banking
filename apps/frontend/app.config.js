@@ -10,6 +10,24 @@ export default {
       EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY:
         process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY,
     },
-    plugins: ['expo-secure-store'],
+    ios: {
+      // You can also add other iOS-specific config here
+    },
+    plugins: [
+      [
+        'expo-local-authentication',
+        {
+          faceIDPermission: 'Allow $(PRODUCT_NAME) to use Face ID.',
+        },
+      ],
+      [
+        'expo-secure-store',
+        {
+          configureAndroidBackup: true,
+          faceIDPermission:
+            'Allow SRFinical to access your Face ID biometric data.',
+        },
+      ],
+    ],
   },
 };

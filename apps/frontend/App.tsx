@@ -3,6 +3,8 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Constants from 'expo-constants';
 import React, { useEffect, useState } from 'react';
+import * as SecureStore from 'expo-secure-store';
+
 import { ActivityIndicator, Text, View } from 'react-native';
 import {
   Homescreen,
@@ -10,9 +12,10 @@ import {
   SendScreen,
   SendConfirmation,
   ContactList,
+  PortfolioOverviewScreen,
 } from './screens';
 import { tokenCache } from './tokenCache';
-// import EventSource from 'react-native-event-source';
+import * as LocalAuthentication from 'expo-local-authentication';
 
 // import { ScreenProvider, useScreenState } from '@ob/screens';
 
@@ -59,6 +62,10 @@ export function NavigationController() {
       <Stack.Screen name='Sendscreen' component={SendScreen} />
       <Stack.Screen name='SendConfirmation' component={SendConfirmation} />
       <Stack.Screen name='ContactList' component={ContactList} />
+      <Stack.Screen
+        name='PortfolioScreen'
+        component={PortfolioOverviewScreen}
+      />
     </Stack.Navigator>
   );
 }

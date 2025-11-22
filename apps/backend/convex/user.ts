@@ -1,11 +1,11 @@
 // mutations.ts
-import { mutation, query } from "./_generated/server";
-import { v } from "convex/values";
+import { mutation, query } from './_generated/server';
+import { v } from 'convex/values';
 import {
   generateCardNumber,
   generateExpirationDate,
   generateCvv,
-} from "../utils";
+} from '../utils';
 
 export const createUserWithAccountAndCard = mutation({
   args: {
@@ -24,7 +24,7 @@ export const createUserWithAccountAndCard = mutation({
   },
   handler: async (ctx, { clerkId, email, name, address, number }) => {
     // 1. Create user (account reference optional because we update it later)
-    const userDoc = await ctx.db.insert("user", {
+    const userDoc = await ctx.db.insert('user', {
       name,
       email,
       clerk_id: clerkId,
@@ -39,7 +39,7 @@ export const createUserWithAccountAndCard = mutation({
     // 2. Create account linked to this users
     const accountNumber = generateCardNumber(12);
     const routingNumber = generateCardNumber(9);
-    const accountDoc = await ctx.db.insert("account", {
+    const accountDoc = await ctx.db.insert('account', {
       number: accountNumber,
       routing: routingNumber,
       user: userDoc,
@@ -51,17 +51,18 @@ export const createUserWithAccountAndCard = mutation({
     const { month, year } = generateExpirationDate(4);
     const cardNumber = generateCardNumber(16);
     const cvv = generateCvv(3);
-    const cardDoc = await ctx.db.insert("card", {
+    const cardDoc = await ctx.db.insert('card', {
       number: cardNumber,
       expiration: { month, year },
       cvv,
       metadata: {
         isLocked: false,
         spendingLimit: 0,
-        cardType: "debit",
+        cardType: 'debit',
       },
       account: accountDoc,
       balance: 0,
+      transactions: [],
     });
 
     // 4. Update account to set card field
@@ -80,8 +81,8 @@ export const getUserByClerkId = query({
   },
   handler: async (ctx, { clerkId }) => {
     const user = await ctx.db
-      .query("user")
-      .filter((q) => q.eq(q.field("clerk_id"), clerkId))
+      .query('user')
+      .filter((q) => q.eq(q.field('clerk_id'), clerkId))
       .first();
     return user || null;
   },
@@ -91,8 +92,8 @@ export const getUserByPhoneNumber = query({
   args: { phoneNumber: v.string() },
   handler: async (ctx, { phoneNumber }) => {
     const user = await ctx.db
-      .query("user")
-      .withIndex("by_phoneNumber", (q) => q.eq("phoneNumber", phoneNumber))
+      .query('user')
+      .withIndex('by_phoneNumber', (q) => q.eq('phoneNumber', phoneNumber))
       .first();
 
     return user || null;
@@ -103,18 +104,18 @@ export const addContactToUser = mutation({
   args: {
     targetClerkId: v.string(),
     contact: v.object({
-      id: v.id("user"),
+      id: v.id('user'),
       phoneNumber: v.string(),
     }),
   },
   handler: async (ctx, { targetClerkId, contact }) => {
     // Find the target user by their Clerk ID
     const targetUser = await ctx.db
-      .query("user")
-      .withIndex("by_clerkId", (q) => q.eq("clerk_id", targetClerkId))
+      .query('user')
+      .withIndex('by_clerkId', (q) => q.eq('clerk_id', targetClerkId))
       .first();
 
-    if (!targetUser) throw new Error("Target user not found");
+    if (!targetUser) throw new Error('Target user not found');
 
     // Retrieve existing contacts or create an empty array
     const contacts = targetUser.metadata?.contacts || [];
@@ -130,7 +131,7 @@ export const addContactToUser = mutation({
 });
 
 export const getUserById = query({
-  args: { id: v.id("user") },
+  args: { id: v.id('user') },
   handler: async (ctx, { id }) => {
     const user = await ctx.db.get(id);
     if (!user) return null;
@@ -140,17 +141,17 @@ export const getUserById = query({
 
 export const updateContacts = mutation({
   args: {
-    userId: v.id("user"),
+    userId: v.id('user'),
     contacts: v.array(
       v.object({
-        id: v.id("user"),
+        id: v.id('user'),
         phoneNumber: v.string(),
       })
     ),
   },
   handler: async ({ db }, { userId, contacts }) => {
     const user = await db.get(userId);
-    if (!user) throw new Error("User not found");
+    if (!user) throw new Error('User not found');
 
     await db.patch(userId, {
       metadata: {

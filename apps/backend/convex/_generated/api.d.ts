@@ -10,6 +10,7 @@
 
 import type * as account from "../account.js";
 import type * as card from "../card.js";
+import type * as transactions from "../transactions.js";
 import type * as user from "../user.js";
 
 import type {
@@ -21,6 +22,7 @@ import type {
 declare const fullApi: ApiFromModules<{
   account: typeof account;
   card: typeof card;
+  transactions: typeof transactions;
   user: typeof user;
 }>;
 
