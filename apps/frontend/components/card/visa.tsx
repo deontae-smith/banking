@@ -1,16 +1,16 @@
+import React, { useState, useRef, useEffect } from 'react';
 import {
   StyleSheet,
-  Text,
   View,
-  Animated,
+  Text,
   TouchableOpacity,
-} from "react-native";
-import React, { useEffect, useState } from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import { AccountDataPayload, CardLockingFunction } from "@ob/account-iso";
-import { Ionicons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-import { useUser } from "@clerk/clerk-expo";
+  Animated,
+} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import { useUser } from '@clerk/clerk-expo';
+import { AccountDataPayload, CardLockingFunction } from '@ob/account-iso';
 
 type VisaCardProps = {
   account: AccountDataPayload;
@@ -24,110 +24,141 @@ const Visa = ({
   isCardLocked,
 }: VisaCardProps) => {
   const [cardDetailsVisible, setCardDetailsVisible] = useState(false);
-
   const { user } = useUser();
   const navigation = useNavigation();
 
-  const openModal = () => {
-    setCardDetailsVisible(!cardDetailsVisible);
-  };
+  const animatedValue = useRef(new Animated.Value(0)).current;
 
+  const toggleDetails = () => setCardDetailsVisible((v) => !v);
+
+  // Auto-hide card details after 10s
   useEffect(() => {
     if (isCardLocked) {
       setCardDetailsVisible(false);
-      return; // stop the timer logic
+      return;
     }
-    let timer: ReturnType<typeof setTimeout>;
 
+    let timer: ReturnType<typeof setTimeout>;
     if (cardDetailsVisible) {
-      timer = setTimeout(() => {
-        setCardDetailsVisible(false);
-      }, 10000);
+      timer = setTimeout(() => setCardDetailsVisible(false), 10000);
     }
 
     return () => clearTimeout(timer);
   }, [cardDetailsVisible, isCardLocked]);
 
+  // Animate card details
+  useEffect(() => {
+    Animated.timing(animatedValue, {
+      toValue: cardDetailsVisible ? 1 : 0,
+      duration: 180,
+      useNativeDriver: true,
+    }).start();
+  }, [cardDetailsVisible]);
+
+  const detailsStyle = {
+    opacity: animatedValue,
+    transform: [
+      {
+        translateY: animatedValue.interpolate({
+          inputRange: [0, 1],
+          outputRange: [8, 0],
+        }),
+      },
+    ],
+  };
+
+  const rightNumberStyle = {
+    opacity: animatedValue.interpolate({
+      inputRange: [0, 1],
+      outputRange: [1, 0],
+    }),
+  };
+
   return (
     <View>
       <LinearGradient
-        colors={["#1E293B", "#1E40AF", "#1E3A8A", "#0F172A"]}
+        colors={['#1E293B', '#1E40AF', '#1E3A8A', '#0F172A']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        style={styles.balanceCard}
+        style={styles.card}
       >
-        <View style={styles.cardHeader}>
-          <Text style={styles.cardName}>{user?.fullName}</Text>
-          <Text style={styles.cardBrand}>VISA</Text>
+        {/* Header */}
+        <View style={styles.headerRow}>
+          <Text style={styles.brand}>VISA</Text>
+          <Animated.Text style={[styles.lastFour, rightNumberStyle]}>
+            •••• {account.card?.number.slice(-4)}
+          </Animated.Text>
         </View>
 
-        {cardDetailsVisible && (
-          <>
-            <Text style={styles.cardNumber}>
-              {account.card?.number.replace(/(\d{4})(?=\d)/g, "$1 ")}
-            </Text>
-            <View style={{ flexDirection: "row", gap: 20, marginTop: -10 }}>
-              <Text style={styles.cardInfo}>CVV: {account.card?.cvv}</Text>
-              <Text style={styles.cardInfo}>
-                EXP: {account.card?.expiration.month}/
-                {account.card?.expiration.year.slice(-2)}
+        {/* Card details */}
+        <Animated.View style={detailsStyle}>
+          {cardDetailsVisible && (
+            <View>
+              <Text style={styles.fullNumber}>
+                {account.card?.number.replace(/(\d{4})(?=\d)/g, '$1 ')}
               </Text>
+              <View style={styles.detailsRow}>
+                <Text style={styles.cardInfo}>CVV: {account.card?.cvv}</Text>
+                <Text style={styles.cardInfo}>
+                  EXP: {account.card?.expiration.month}/
+                  {account.card?.expiration.year.slice(-2)}
+                </Text>
+              </View>
             </View>
-          </>
-        )}
+          )}
+        </Animated.View>
 
+        {/* Balance */}
         <View style={styles.balanceRow}>
-          <View style={{ flexDirection: "column" }}>
-            <Text style={styles.label}>Available Balance</Text>
-            <Text style={styles.balanceAmount}>${account?.card?.balance}</Text>
+          <View>
+            <Text style={styles.balanceLabel}>Available Balance</Text>
+            <Text style={styles.balanceAmount}>${account.card?.balance}</Text>
           </View>
 
-          <TouchableOpacity onPress={openModal}>
-            <Ionicons
-              name={cardDetailsVisible ? "eye-off-outline" : "eye-outline"}
-              size={22}
-              color="white"
-            />
-          </TouchableOpacity>
+          {!isCardLocked && (
+            <TouchableOpacity onPress={toggleDetails}>
+              <Ionicons
+                name={cardDetailsVisible ? 'eye-off-outline' : 'eye-outline'}
+                size={26}
+                color='white'
+              />
+            </TouchableOpacity>
+          )}
         </View>
+
+        {/* Lock overlay */}
         {isCardLocked && (
           <View style={styles.lockOverlay}>
-            <Ionicons name="lock-closed" size={50} color="white" />
+            <Ionicons name='lock-closed' size={50} color='white' />
           </View>
         )}
       </LinearGradient>
-      {/* Send/Receive Buttons */}
-      <View style={styles.transferContainer}>
+
+      {/* Action buttons */}
+      <View style={styles.actionRow}>
         <TouchableOpacity
           style={[
-            styles.receiveBtn,
-            { backgroundColor: isCardLocked ? "#1D4ED8" : "#d2d2d25f" },
+            styles.lockBtn,
+            isCardLocked && { backgroundColor: '#1D4ED8' },
           ]}
           onPress={() => handleLockingFeature(account.card?._id, isCardLocked!)}
         >
-          {isCardLocked && (
-            <Ionicons name="lock-closed" size={18} color="#fff" />
-          )}
-          <Text
-            style={[
-              styles.receiveText,
-              { color: isCardLocked ? "#fff" : "#000" },
-            ]}
-          >
-            {isCardLocked ? "Unlock" : "Lock"}
+          <Ionicons
+            name={isCardLocked ? 'lock-open' : 'lock-closed'}
+            size={18}
+            color='#fff'
+          />
+          <Text style={styles.lockText}>
+            {isCardLocked ? 'Unlock' : 'Lock'}
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[
-            styles.sendBtn,
-            isCardLocked && { opacity: 0.4 }, // visual feedback
-          ]}
-          //   @ts-ignore
-          onPress={() => navigation.navigate("Sendscreen")}
-          disabled={isCardLocked}
+          style={[styles.sendBtn, isCardLocked && { opacity: 0.35 }]}
+          disabled={isCardLocked!}
+          //@ts-ignore
+          onPress={() => navigation.navigate('Sendscreen')}
         >
-          {/* <Ionicons name="arrow-down" size={20} color="#fff" /> */}
           <Text style={styles.sendText}>Send</Text>
         </TouchableOpacity>
       </View>
@@ -138,103 +169,75 @@ const Visa = ({
 export default Visa;
 
 const styles = StyleSheet.create({
-  balanceCard: {
+  card: {
     marginTop: 30,
     height: 200,
-    borderRadius: 16,
+    borderRadius: 20,
     padding: 20,
-    justifyContent: "space-between",
-    shadowColor: "#000",
-    shadowOpacity: 0.25,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 6,
+    justifyContent: 'space-between',
+    shadowColor: '#000',
+    shadowOpacity: 0.18,
+    shadowRadius: 14,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 12,
   },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
-
-  cardName: {
-    color: "white",
-    fontSize: 16,
-    fontWeight: "500",
+  brand: { color: 'white', fontSize: 22, fontWeight: '700' },
+  lastFour: { color: 'white', fontSize: 14, fontWeight: '600' },
+  fullNumber: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: '700',
+    letterSpacing: 2,
   },
-  cardBrand: {
-    color: "white",
-    fontSize: 18,
-    fontWeight: "700",
+  detailsRow: { flexDirection: 'row', gap: 20, marginTop: 4 },
+  cardInfo: { color: 'white', fontWeight: '600', fontSize: 14 },
+  balanceRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  cardNumber: {
-    color: "white",
-    fontWeight: "700",
-    fontSize: 22,
-  },
-  cardInfo: {
-    color: "white",
-    fontWeight: "700",
-    fontSize: 14,
-  },
-  balanceAmount: {
-    color: "white",
-    fontWeight: "700",
-    fontSize: 32,
-  },
+  balanceLabel: { color: '#cbd5e1', fontSize: 13 },
+  balanceAmount: { color: 'white', fontSize: 28, fontWeight: '700' },
   lockOverlay: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: "rgba(0,0,0,0.6)", // semi-transparent tint
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: 'rgba(0,0,0,0.45)',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 20,
   },
-  label: {
-    color: "#cbd5e1",
-    fontSize: 13,
+  actionRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 20,
   },
-  balanceRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  transferContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: 25,
-  },
-  receiveBtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#d2d2d25f",
-    height: 55,
-    borderRadius: 25,
+  lockBtn: {
     flex: 1,
+    backgroundColor: '#475569',
+    height: 50,
+    borderRadius: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginRight: 10,
+    gap: 6,
   },
+  lockText: { color: 'white', fontWeight: '600', fontSize: 16 },
   sendBtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#000",
-    height: 55,
-    borderRadius: 25,
     flex: 1,
-    marginLeft: 10,
+    backgroundColor: 'black',
+    height: 50,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  receiveText: {
-    fontWeight: "600",
-    color: "#000",
-    marginLeft: 8,
-    fontSize: 16,
-  },
-  sendText: {
-    fontWeight: "600",
-    color: "#fff",
-    marginLeft: 8,
-    fontSize: 16,
-  },
+  sendText: { color: 'white', fontWeight: '700', fontSize: 16 },
 });

@@ -1,29 +1,34 @@
 
-> @ob/frontend@1.0.0 dev /Users/doron.r/Programming/banking/apps/frontend
+> @ob/frontend@1.0.0 dev /Users/deontae/Desktop/main/banking/apps/frontend
 > expo start
 
 [90menv: load .env[39m
 [90menv: export EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY[39m
-[90mStarting project at /Users/doron.r/Programming/banking/apps/frontend[39m
+[90mStarting project at /Users/deontae/Desktop/main/banking/apps/frontend[39m
 [2mStarting Metro Bundler[22m
+[33mThe following packages should be updated for best compatibility with the installed [1mexpo[22m version:[39m
+[33m  [1mexpo[22m[36m@[39m[33m[31m54.0.23[39m[33m - expected version: [32m~54.0.25[39m[33m[39m
+[33m  [1mexpo-linking[22m[36m@[39m[33m[31m8.0.8[39m[33m - expected version: [32m~8.0.9[39m[33m[39m
+[33m  [1mexpo-router[22m[36m@[39m[33m[31m6.0.14[39m[33m - expected version: [32m~6.0.15[39m[33m[39m
+[33m  [1mexpo-splash-screen[22m[36m@[39m[33m[31m31.0.10[39m[33m - expected version: [32m~31.0.11[39m[33m[39m
+[33mYour project may not work correctly until you install the expected versions of the packages.[39m
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-█ ▄▄▄▄▄ █▄▄▄ ▀ ██ █ ▄▄▄▄▄ █
-█ █   █ ██▄▀ █  ▄▄█ █   █ █
-█ █▄▄▄█ ██▀▄ ▄▀██▀█ █▄▄▄█ █
-█▄▄▄▄▄▄▄█ ▀▄█ ▀▄▀ █▄▄▄▄▄▄▄█
-█ ▄▀▄▄█▄▀▀▄▀█▄▀█▀ █▄█▀█▀▀▄█
-██ ▄▀█▄▄▀█▄██▄▄▄▄ ▀███▄▀▀ █
-█▀█▀▀▀ ▄▄▀▄ █▀█▄ █ ▄▀▀█▀ ██
-█ ▄ ▄▀ ▄▄█▀██▀▄▀ ▄▀ ██▄▀  █
-█▄█▄██▄▄▄ █  ▄▄ █ ▄▄▄  ▄▀▄█
-█ ▄▄▄▄▄ ██ ▄▀▄  █ █▄█ ███ █
-█ █   █ █ ▀▀▄ ▀█▄ ▄  ▄ █▀▀█
-█ █▄▄▄█ █▀ █ ▀█▄ ▄█▀▀▄█   █
-█▄▄▄▄▄▄▄█▄▄█▄██▄▄▄▄█▄▄███▄█
+█ ▄▄▄▄▄ █▄▄▄ ▀▀▀█ █ ▄▄▄▄▄ █
+█ █   █ ██▄▀ █ ▀▄▄█ █   █ █
+█ █▄▄▄█ ██▀▄ ▄█▀█▀█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ ▀▄█ ▀ ▀ █▄▄▄▄▄▄▄█
+█ ▄▀  █▄▀▀▄▀█▄▀█▀ █▄█▀█▀▀▄█
+█ ██ ▄█▄▀ ▄██▄▄▄▄ ▀███▄▀▀ █
+█ ▀▀█ ▄▄▀   █▀█▄ █ ▄▀▀█▀ ██
+█ ▄  ▀█▄██▄ █▀▄▀ ▄▀ ██▄▀  █
+█▄██▄▄█▄█ ▀  ▄▄ █ ▄▄▄  ▄▀▄█
+█ ▄▄▄▄▄ ██▀▄▀▄  █ █▄█ ███ █
+█ █   █ █ █▀▄ ▀█▄ ▄  ▄ █▀▀█
+█ █▄▄▄█ █▀▀▀ ▀█▄ ▄█▀▀▄█   █
+█▄▄▄▄▄▄▄█▄▄▄▄██▄▄▄▄█▄▄███▄█
 
-› Metro waiting on [4mexp://192.168.1.153:8081[24m
-› Scan the QR code above with Expo Go
-(Android) or the Camera app (iOS)
+› Metro waiting on [4mexp://192.168.1.184:8081[24m
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
 
 › Web is waiting on [4mhttp://localhost:8081[24m
 
@@ -43,958 +48,148 @@
 › Press [1m?[22m [2m│[22m show all commands
 
 Logs for your project will appear below.[2m Press Ctrl+C to exit.[22m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░
-░[39m[49m[1m  9.5% [22m[2m(16/52)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░
-░[39m[49m[1m 11.6% [22m[2m( 77/226)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░
-░[39m[49m[1m 32.1% [22m[2m(171/302)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░
-░[39m[49m[1m 42.9% [22m[2m(260/397)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░
-░[39m[49m[1m 69.8% [22m[2m(396/474)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░
-░[39m[49m[1m 82.9% [22m[2m(508/558)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░
-░[39m[49m[1m 91.2% [22m[2m(572/599)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 97.7% [22m[2m(674/682)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.7% [22m[2m(681/682)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(682/682)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(713/781)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(744/834)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(790/919)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(820/980)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m( 979/1103)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1116/1135)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1142/1144)[22m
-[42D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1143/1144)[22m
-[42D[2A[0J[32m[1miOS[22m Bundled [39m[2m2270ms[22m[0m[2m apps/frontend/index.ts (1144 modules)[22m[0m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1143/1144)[22m
-[42D[2A[0J[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[32m[1miOS[22m Bundled [39m[2m118ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  1.0% [22m[2m(1/1)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  4.0% [22m[2m(2/9)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  4.9% [22m[2m( 4/18)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  7.7% [22m[2m( 5/18)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  7.7% [22m[2m( 5/21)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 6/21)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m(  7/105)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 10/115)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 14/115)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 16/117)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 17/118)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 18/118)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 18/126)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 19/126)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 20/136)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 21/137)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 22/137)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 23/138)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 24/138)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 26/141)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 34/176)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 37/180)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 38/180)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 39/180)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 40/184)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 44/184)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 45/184)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.2% [22m[2m( 49/195)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m  8.9% [22m[2m( 60/201)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m 11.3% [22m[2m( 71/211)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓[49m[39m[47m[37m░░░░░░░░░░░░░░░[39m[49m[1m 12.2% [22m[2m( 78/223)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓[49m[39m[47m[37m░░░░░░░░░░░░░░[39m[49m[1m 14.2% [22m[2m( 87/231)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓[49m[39m[47m[37m░░░░░░░░░░░░░░[39m[49m[1m 17.3% [22m[2m(101/243)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░[39m[49m[1m 20.0% [22m[2m(115/257)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░░[39m[49m[1m 21.8% [22m[2m(127/272)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 25.4% [22m[2m(144/286)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 27.7% [22m[2m(159/302)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 27.7% [22m[2m(174/336)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 28.6% [22m[2m(192/359)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░░[39m[49m[1m 30.6% [22m[2m(209/378)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░[39m[49m[1m 33.1% [22m[2m(229/398)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░[39m[49m[1m 35.1% [22m[2m(246/415)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░░[39m[49m[1m 35.4% [22m[2m(253/425)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░[39m[49m[1m 38.0% [22m[2m(267/433)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░[39m[49m[1m 40.4% [22m[2m(279/439)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░░[39m[49m[1m 43.1% [22m[2m(294/448)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 44.3% [22m[2m(303/455)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 44.3% [22m[2m(307/477)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 44.3% [22m[2m(314/479)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 44.3% [22m[2m(332/501)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 44.3% [22m[2m(341/546)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 44.3% [22m[2m(365/558)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 46.3% [22m[2m(387/569)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░░[39m[49m[1m 48.0% [22m[2m(401/579)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░[39m[49m[1m 50.7% [22m[2m(423/594)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░[39m[49m[1m 54.1% [22m[2m(442/601)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░[39m[49m[1m 55.5% [22m[2m(453/608)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░░[39m[49m[1m 56.1% [22m[2m(462/617)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(476/619)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(486/657)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(498/700)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(516/707)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(533/720)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(543/739)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(558/760)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(570/772)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(580/794)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(588/794)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(594/796)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(597/801)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(603/807)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(608/814)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(616/817)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.1% [22m[2m(626/821)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 59.9% [22m[2m(638/824)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 61.4% [22m[2m(649/828)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(656/832)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(670/855)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(686/886)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(697/901)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(710/918)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(715/920)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(725/925)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░░[39m[49m[1m 62.2% [22m[2m(740/944)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░[39m[49m[1m 63.8% [22m[2m(754/944)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░[39m[49m[1m 65.2% [22m[2m(763/945)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░[39m[49m[1m 66.6% [22m[2m(776/951)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░[39m[49m[1m 67.4% [22m[2m(783/954)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░░[39m[49m[1m 67.4% [22m[2m(798/974)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░[39m[49m[1m 68.8% [22m[2m(813/980)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░[39m[49m[1m 68.9% [22m[2m(824/993)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░[39m[49m[1m 70.9% [22m[2m(837/994)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░░[39m[49m[1m 72.8% [22m[2m(849/995)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░░[39m[49m[1m 77.7% [22m[2m(877/995)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 81.7% [22m[2m(901/997)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 81.7% [22m[2m( 905/1001)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 81.8% [22m[2m( 910/1006)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 83.3% [22m[2m( 923/1011)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 83.5% [22m[2m( 930/1018)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 85.7% [22m[2m( 946/1022)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░░[39m[49m[1m 86.7% [22m[2m( 962/1033)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 88.6% [22m[2m( 978/1039)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 90.3% [22m[2m( 991/1043)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 91.3% [22m[2m(1004/1051)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░░[39m[49m[1m 92.6% [22m[2m(1019/1059)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 94.1% [22m[2m(1033/1065)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 95.9% [22m[2m(1047/1069)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 98.0% [22m[2m(1060/1071)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 98.9% [22m[2m(1065/1071)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.3% [22m[2m(1072/1076)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.4% [22m[2m(1073/1076)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1074/1076)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1078/1081)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1089/1104)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1105/1126)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1122/1142)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1137/1149)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.6% [22m[2m(1146/1149)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.7% [22m[2m(1147/1149)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1148/1149)[22m
+[251D[1A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.8% [22m[2m(1148/1149)[22m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[251D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1149/1149)[22m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[251D[2A[0J[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1150/1150)[22m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[251D[2A[0J[32m[1miOS[22m Bundled [39m[2m19161ms[22m[0m[2m apps/frontend/index.ts (1150 modules)[22m[0m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [32m[42m▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[49m[39m[47m[37m░[39m[49m[1m 99.9% [22m[2m(1150/1150)[22m
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[251D[2A[0J[32m[1miOS[22m Bundled [39m[2m2273ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
 [7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 404]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 503]
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Failed to update lock status]
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[32m[1miOS[22m Bundled [39m[2m54ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
+[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35JDgU8QEMiecvRPXFHITbKQWUF
+[7m[31m[1m ERROR [22m[39m[27m Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `RCTView`.  It was passed a child from Homescreen.
+[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
+[251D[1A[0J[32m[1miOS[22m Bundled [39m[2m96ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
 [7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Failed to update lock status]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Failed to update lock status]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Failed to update lock status]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Failed to update lock status]
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Failed to update lock status]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m undefined new status from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m {"data": {"newStatus": true, "success": true}} data from hook
-[7m[37m[1m LOG [22m[39m[27m undefined new status from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [Error: Request failed with status 500]
-[7m[37m[1m LOG [22m[39m[27m undefined data from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[33m[1m WARN [22m[39m[27m SSE connection error: {"message": "The endpoint wilma-nightmarish-alexa.ngrok-free.dev is offline.
-
-ERR_NGROK_3200
-", "type": "error", "xhrState": 3, "xhrStatus": 404}
-[7m[31m[1m ERROR [22m[39m[27m Error locking card: [ReferenceError: Property 'newStatus' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/hooks/useAccountData.ts: Missing initializer in destructuring declaration. (13:10)
+[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35JSQDRrAvlQoYY5bInD40Tqccb
+[7m[31m[1m ERROR [22m[39m[27m Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
 
-[0m [90m 11 |[39m   [36mconst[39m [loading[33m,[39m setLoading] [33m=[39m useState[33m<[39m[33mboolean[39m[33m>[39m([33m![39m[33m![39mclerkId)[33m;[39m
- [90m 12 |[39m   [36mconst[39m [error[33m,[39m setError] [33m=[39m useState[33m<[39m[33mstring[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m
-[31m[1m>[22m[39m[90m 13 |[39m   [36mconst[39m []
- [90m    |[39m           [31m[1m^[22m[39m
- [90m 14 |[39m
- [90m 15 |[39m   [36mconst[39m eventSourceRef [33m=[39m useRef[33m<[39m[33mEventSource[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m
- [90m 16 |[39m   [36mconst[39m reconnectTimerRef [33m=[39m useRef[33m<[39m[33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/hooks/useAccountData.ts: Missing initializer in destructuring declaration. (13:10)
-
-[0m [90m 11 |[39m   [36mconst[39m [loading[33m,[39m setLoading] [33m=[39m useState[33m<[39m[33mboolean[39m[33m>[39m([33m![39m[33m![39mclerkId)[33m;[39m
- [90m 12 |[39m   [36mconst[39m [error[33m,[39m setError] [33m=[39m useState[33m<[39m[33mstring[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m
-[31m[1m>[22m[39m[90m 13 |[39m   [36mconst[39m []
- [90m    |[39m           [31m[1m^[22m[39m
- [90m 14 |[39m
- [90m 15 |[39m   [36mconst[39m eventSourceRef [33m=[39m useRef[33m<[39m[33mEventSource[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m
- [90m 16 |[39m   [36mconst[39m reconnectTimerRef [33m=[39m useRef[33m<[39m[33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m [33m|[39m [36mnull[39m[33m>[39m([36mnull[39m)[33m;[39m[0m]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[32m[1miOS[22m Bundled [39m[2m210ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m LOG [22m[39m[27m null locked status in homescreen
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m LOG [22m[39m[27m true locked status in homescreen
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'isCardLocked' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'locked' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token (28:38)
-
-[0m [90m 26 |[39m   }[33m;[39m
- [90m 27 |[39m
-[31m[1m>[22m[39m[90m 28 |[39m   [36mif[39m ([33m![39muser [33m||[39m [33m![39maccount [33m||[39m loading [33m||[39m ) [36mreturn[39m[33m;[39m
- [90m    |[39m                                       [31m[1m^[22m[39m
- [90m 29 |[39m
- [90m 30 |[39m   [36mreturn[39m (
- [90m 31 |[39m     [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mcontainer}[33m>[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/Homescreen.tsx: Unexpected token (28:38)
-
-[0m [90m 26 |[39m   }[33m;[39m
- [90m 27 |[39m
-[31m[1m>[22m[39m[90m 28 |[39m   [36mif[39m ([33m![39muser [33m||[39m [33m![39maccount [33m||[39m loading [33m||[39m ) [36mreturn[39m[33m;[39m
- [90m    |[39m                                       [31m[1m^[22m[39m
- [90m 29 |[39m
- [90m 30 |[39m   [36mreturn[39m (
- [90m 31 |[39m     [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mcontainer}[33m>[39m[0m]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[32m[1miOS[22m Bundled [39m[2m75ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[1miOS[22m [0m[2mapps/frontend/[22m[0m[1mindex.ts[22m [47m[37m░░░░░░░░░░░░░░░
-░[39m[49m[1m  0.0% [22m[2m(0/1)[22m
-[42D[2A[0J[32m[1miOS[22m Bundled [39m[2m65ms[22m[0m[2m apps/frontend/index.ts (1 module)[22m[0m
-[7m[33m[1m WARN [22m[39m[27m Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'locked' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'locked' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'locked' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (120:30)
-
-[0m [90m 118 |[39m           style[33m=[39m{[
- [90m 119 |[39m             styles[33m.[39msendBtn[33m,[39m
-[31m[1m>[22m[39m[90m 120 |[39m             isCardLocked [33m&&[39m { [33m:[39m [32m'red'[39m }[33m,[39m [90m// visual feedback[39m
- [90m     |[39m                               [31m[1m^[22m[39m
- [90m 121 |[39m           ]}
- [90m 122 |[39m           [90m//   @ts-ignore[39m
- [90m 123 |[39m           onPress[33m=[39m{() [33m=>[39m navigation[33m.[39mnavigate([32m"Sendscreen"[39m)}[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (120:30)
-
-[0m [90m 118 |[39m           style[33m=[39m{[
- [90m 119 |[39m             styles[33m.[39msendBtn[33m,[39m
-[31m[1m>[22m[39m[90m 120 |[39m             isCardLocked [33m&&[39m { [33m:[39m [32m'red'[39m }[33m,[39m [90m// visual feedback[39m
- [90m     |[39m                               [31m[1m^[22m[39m
- [90m 121 |[39m           ]}
- [90m 122 |[39m           [90m//   @ts-ignore[39m
- [90m 123 |[39m           onPress[33m=[39m{() [33m=>[39m navigation[33m.[39mnavigate([32m"Sendscreen"[39m)}[0m]
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (38:30)
-
-[0m [90m 36 |[39m     [36mlet[39m timer[33m:[39m [33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m[33m;[39m
- [90m 37 |[39m
-[31m[1m>[22m[39m[90m 38 |[39m     [36mif[39m (cardDetailsVisible [33m&&[39m ) {
- [90m    |[39m                               [31m[1m^[22m[39m
- [90m 39 |[39m       timer [33m=[39m setTimeout(() [33m=>[39m {
- [90m 40 |[39m         setCardDetailsVisible([36mfalse[39m)[33m;[39m
- [90m 41 |[39m       }[33m,[39m [35m10000[39m)[33m;[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (38:30)
-
-[0m [90m 36 |[39m     [36mlet[39m timer[33m:[39m [33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m[33m;[39m
- [90m 37 |[39m
-[31m[1m>[22m[39m[90m 38 |[39m     [36mif[39m (cardDetailsVisible [33m&&[39m ) {
- [90m    |[39m                               [31m[1m^[22m[39m
- [90m 39 |[39m       timer [33m=[39m setTimeout(() [33m=>[39m {
- [90m 40 |[39m         setCardDetailsVisible([36mfalse[39m)[33m;[39m
- [90m 41 |[39m       }[33m,[39m [35m10000[39m)[33m;[39m[0m]
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (38:44)
-
-[0m [90m 36 |[39m     [36mlet[39m timer[33m:[39m [33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m[33m;[39m
- [90m 37 |[39m
-[31m[1m>[22m[39m[90m 38 |[39m     [36mif[39m (cardDetailsVisible [33m&&[39m isCardLocked[33m==[39m) {
- [90m    |[39m                                             [31m[1m^[22m[39m
- [90m 39 |[39m       timer [33m=[39m setTimeout(() [33m=>[39m {
- [90m 40 |[39m         setCardDetailsVisible([36mfalse[39m)[33m;[39m
- [90m 41 |[39m       }[33m,[39m [35m10000[39m)[33m;[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (38:44)
-
-[0m [90m 36 |[39m     [36mlet[39m timer[33m:[39m [33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m[33m;[39m
- [90m 37 |[39m
-[31m[1m>[22m[39m[90m 38 |[39m     [36mif[39m (cardDetailsVisible [33m&&[39m isCardLocked[33m==[39m) {
- [90m    |[39m                                             [31m[1m^[22m[39m
- [90m 39 |[39m       timer [33m=[39m setTimeout(() [33m=>[39m {
- [90m 40 |[39m         setCardDetailsVisible([36mfalse[39m)[33m;[39m
- [90m 41 |[39m       }[33m,[39m [35m10000[39m)[33m;[39m[0m]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (38:44)
-
-[0m [90m 36 |[39m     [36mlet[39m timer[33m:[39m [33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m[33m;[39m
- [90m 37 |[39m
-[31m[1m>[22m[39m[90m 38 |[39m     [36mif[39m (cardDetailsVisible [33m&&[39m isCardLocked[33m==[39m) {
- [90m    |[39m                                             [31m[1m^[22m[39m
- [90m 39 |[39m       timer [33m=[39m setTimeout(() [33m=>[39m {
- [90m 40 |[39m         setCardDetailsVisible([36mfalse[39m)[33m;[39m
- [90m 41 |[39m       }[33m,[39m [35m10000[39m)[33m;[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/components/card/visa.tsx: Unexpected token (38:44)
-
-[0m [90m 36 |[39m     [36mlet[39m timer[33m:[39m [33mReturnType[39m[33m<[39m[36mtypeof[39m setTimeout[33m>[39m[33m;[39m
- [90m 37 |[39m
-[31m[1m>[22m[39m[90m 38 |[39m     [36mif[39m (cardDetailsVisible [33m&&[39m isCardLocked[33m==[39m) {
- [90m    |[39m                                             [31m[1m^[22m[39m
- [90m 39 |[39m       timer [33m=[39m setTimeout(() [33m=>[39m {
- [90m 40 |[39m         setCardDetailsVisible([36mfalse[39m)[33m;[39m
- [90m 41 |[39m       }[33m,[39m [35m10000[39m)[33m;[39m[0m]
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'isCardLock' doesn't exist]
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'isCardLock' doesn't exist]
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'isCardLock' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[31m[1m ERROR [22m[39m[27m [ReferenceError: Property 'isCardLock' doesn't exist]
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m LOG [22m[39m[27m true data from hook
-[7m[37m[1m LOG [22m[39m[27m false data from hook
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[7m[31m[1m ERROR [22m[39m[27m Text strings must be rendered within a <Text> component.
-[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35BIYX1QGJi8ggJk2X1BDYxOSM4
-[31m[7m[1m ERROR [22m[27m[39m SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendScreen.tsx: Unexpected token (140:52)
-
-[0m [90m 138 |[39m       {[90m/* Header */[39m}
- [90m 139 |[39m       [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mheader}[33m>[39m
-[31m[1m>[22m[39m[90m 140 |[39m         [33m<[39m[33mTouchableOpacity[39m onPress[33m=[39m{() [33m=>[39m navigation[33m.[39m}[33m>[39m
- [90m     |[39m                                                     [31m[1m^[22m[39m
- [90m 141 |[39m           [33m<[39m[33mIonicons[39m name[33m=[39m[32m"arrow-back-sharp"[39m size[33m=[39m{[35m24[39m} color[33m=[39m[32m"black"[39m [33m/[39m[33m>[39m
- [90m 142 |[39m         [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 143 |[39m[0m
-[7m[31m[1m ERROR [22m[39m[27m [Error: TransformError SyntaxError: /Users/doron.r/Programming/banking/apps/frontend/screens/SendScreen.tsx: Unexpected token (140:52)
-
-[0m [90m 138 |[39m       {[90m/* Header */[39m}
- [90m 139 |[39m       [33m<[39m[33mView[39m style[33m=[39m{styles[33m.[39mheader}[33m>[39m
-[31m[1m>[22m[39m[90m 140 |[39m         [33m<[39m[33mTouchableOpacity[39m onPress[33m=[39m{() [33m=>[39m navigation[33m.[39m}[33m>[39m
- [90m     |[39m                                                     [31m[1m^[22m[39m
- [90m 141 |[39m           [33m<[39m[33mIonicons[39m name[33m=[39m[32m"arrow-back-sharp"[39m size[33m=[39m{[35m24[39m} color[33m=[39m[32m"black"[39m [33m/[39m[33m>[39m
- [90m 142 |[39m         [33m<[39m[33m/[39m[33mTouchableOpacity[39m[33m>[39m
- [90m 143 |[39m[0m]
+Check the render method of `RCTView`.  It was passed a child from Homescreen.
+[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35JDgU8QEMiecvRPXFHITbKQWUF
+[7m[37m[1m DEBUG [22m[39m[27m SSE connection opened for clerkId user_35JDgU8QEMiecvRPXFHITbKQWUF

@@ -58,6 +58,23 @@ export interface Account {
   card: string; // reference to Card id
 }
 
+export type Transaction = {
+  senderIdentifier: string;
+  recipientCardId: string;
+  amount: number;
+  title: string;
+
+  type: 'TRANSFER' | 'DEPOSIT' | 'WITHDRAWAL' | 'PAYMENT';
+  status: 'PENDING' | 'COMPLETED' | 'FAILED' | 'REVERSED';
+  timestamp: number;
+  metadata: {
+    initiatedBy: string;
+    method: 'INSTANT' | 'SCHEDULED';
+    fees: number;
+    location?: string;
+  };
+};
+
 export interface Card {
   number: string;
   expiration: ExpirationObject;
@@ -65,6 +82,7 @@ export interface Card {
   metadata: CardMeta;
   account: string; // reference to Account id
   balance: number;
+  transactions: Transaction[];
 }
 
 export interface AccountDataPayload {
@@ -90,4 +108,5 @@ export interface UseUserAccountResult {
   error: string | null;
   handleLockingFeature: CardLockingFunction;
   isCardLocked: boolean | null;
+  transactions: Transaction[];
 }

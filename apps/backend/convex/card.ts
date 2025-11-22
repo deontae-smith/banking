@@ -5,7 +5,19 @@ export const getCardById = query({
   args: { id: v.id('card') },
   handler: async ({ db }, { id }) => {
     const card = await db.get(id);
-    return card || null;
+    if (!card) return null;
+
+    // If your schema has: transactions: v.array(v.id("transaction"))
+    const transactionIds: Id<'transaction'>[] = card.transactions || [];
+
+    const transactions = await Promise.all(
+      transactionIds.map(async (tid) => db.get(tid))
+    );
+
+    return {
+      ...card,
+      transactions: transactions.filter(Boolean), // remove nulls
+    };
   },
 });
 
@@ -15,6 +27,7 @@ export const sendMoney = mutation({
     recipientCardId: v.id('card'),
     amount: v.number(),
   },
+
   handler: async ({ db }, { senderCardId, recipientCardId, amount }) => {
     if (amount <= 0) throw new Error('Amount must be greater than zero');
 
@@ -26,13 +39,12 @@ export const sendMoney = mutation({
 
     if (senderCard.balance < amount) throw new Error('Insufficient funds');
 
-    // Helper function to round to 2 decimal places
     const round2 = (num: number) => Number(num.toFixed(2));
 
     const newSenderBalance = round2(senderCard.balance - amount);
     const newRecipientBalance = round2(recipientCard.balance + amount);
 
-    // Update balances atomically
+    // Balance updates
     await db.patch(senderCardId, { balance: newSenderBalance });
     await db.patch(recipientCardId, { balance: newRecipientBalance });
 
